@@ -25,38 +25,61 @@ aphid_traits = df_results %>%
            sep = ":",
            remove = FALSE)
 
-# Divide the photo name into 5 columns
+# import plot name conversion table:
+plot_names <- fread("data/table of spotnames_maud.csv", data.table = FALSE)
+
+# Add new columns for ID_plot, collector and date of collection
+for (i in unique(plot_names$`name of image`)){
+  ind <- grep(pattern = i, x = aphid_traits$PhotoName)
+  aphid_traits[ind, "ID_plot"] <- 
+    plot_names[plot_names$`name of image` == i, "ID_plot"]
+  aphid_traits[ind, "collector"] <- 
+    plot_names[plot_names$`name of image` == i, "collector"]
+  aphid_traits[ind, "date_collected"] <- 
+    plot_names[plot_names$`name of image` == i, "date collected"]
+  aphid_traits[ind, "colony_judith"] <- 
+    plot_names[plot_names$`name of image` == i, "Colony"]
+}
+
+# Divide the photo name into 5 columns:
 aphid_traits <- aphid_traits %>%
   separate(PhotoName,
            into = c("PlotA", "PlotB",
-                    "ColonyNumber","Individual", "PhotoType"),
+                    "ColonyNumber","Individual_letter", "PhotoType"),
            fill = "warn",
            sep = "_",
            remove = FALSE
-           )
+  )
+
+# Correct columns for Sudkreuz plot
+# replace with the correct columns:
+aphid_traits[which(aphid_traits$ID_plot == "Sk_01"),
+             c("ColonyNumber","Individual_letter", "PhotoType")] <-
+  aphid_traits[which(aphid_traits$ID_plot == "Sk_01"),
+               c("PlotB", "ColonyNumber","Individual_letter")]
 
 # Correct columns for the judith samples, 
 # since they have no colony number :
+aphid_traits[aphid_traits$collector == "Judith",
+             c("Individual_letter", "PhotoType")] <-
+  aphid_traits[aphid_traits$collector == "Judith",
+               c("ColonyNumber","Individual_letter")]
 
-# identify judith's samples with problematic columns:
-aphid_traits$judiths <- 0
-aphid_traits$judiths[which(is.na(aphid_traits$PhotoType))] <- 1
+# replace colony number by identifier f
+aphid_traits[aphid_traits$collector == "Judith","ColonyNumber"] <- aphid_traits[aphid_traits$collector == "Judith","colony_judith"]
 
-# replace with the correct columns:
-aphid_traits[aphid_traits$judiths ==1,
-             c("Individual", "PhotoType")] <-
-aphid_traits[aphid_traits$judiths ==1,
-             c("ColonyNumber","Individual")]
-
-# replace colony number by a generic value of 1 :
-aphid_traits[aphid_traits$judiths ==1,"ColonyNumber"] <- 1
+# Create a unique identifier for each individual aphid:
+aphid_traits$Colony <- paste(aphid_traits$ID_plot, 
+                                 aphid_traits$ColonyNumber,
+                                 sep = "-")
 
 
-# Paste together the two sides of the plot name which were divided by "_"
-aphid_traits <- unite(data = aphid_traits, PlotA:PlotB,
-                      col = "Plot_ID",
-                      sep = "_",
-                      remove = TRUE, na.rm = FALSE)
+# Create a unique identifier for each individual aphid:
+aphid_traits$Individual <- paste(aphid_traits$Colony,
+                                 aphid_traits$Individual_letter,
+                                 sep = "-")
+
+
 
 # Extract name of trait and "part" = when trait measure was cut into two parts
 aphid_traits <- aphid_traits %>%
@@ -84,7 +107,37 @@ aphid_traits$Trait = sapply(aphid_traits$Trait, function(x) {
 
 # Check if trait names make sense:
 sort(unique(aphid_traits$Trait))
-      
+# replace "flag" by ANT3 for the third antenna segment measured?
+aphid_traits$Trait <- str_replace_all(aphid_traits$Trait,
+                pattern = "flag",
+                replacement = "ant3")
+
+aphid_traits$Trait.type <- str_replace_all(aphid_traits$Trait.type,
+                pattern = "flag",
+                replacement = "ant3")
+
+# Clean up unnecessary columns:
+aphid_traits <- aphid_traits[, -which(colnames(aphid_traits) %in% c( "V1", "colony_judith","PlotA", "PlotB"))] 
+
+# Calculate mean across 3 replicate measures ####
+tmp <- doBy::summaryBy(formula = Length ~ ID_plot + Colony + Individual + Trait.type + Trait + side + Part,
+                id = ~ collector + date_collected + PhotoName,
+                data = aphid_traits,
+                FUN = mean,
+                keep.names = TRUE)
+
+# Sum part A and B when useful 
+tmp <- doBy::summaryBy(formula = Length ~ ID_plot + Colony + Individual + Trait.type + Trait + side,
+                       id = ~ collector + date_collected + PhotoName,
+                       data = tmp,
+                       FUN = sum,
+                       keep.names = TRUE)
+
+
+# check out data quickly
+boxplot(Length ~ ID_plot:collector,
+        data = tmp[tmp$Trait.type=="body_width",], las = 2)
+
 # import and reformat metadata on photo magnification and scale ####
 
 ## import and reformat excel data
