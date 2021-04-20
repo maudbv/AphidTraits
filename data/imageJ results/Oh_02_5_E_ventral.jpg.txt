@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	Oh_02_5_E_ventral.jpg:thorax_width_1	1.380	830.241
+2	Oh_02_5_E_ventral.jpg:thorax_width_2	1.380	830.241
+3	Oh_02_5_E_ventral.jpg:thorax_width_3	1.668	824.349
+4	Oh_02_5_E_ventral.jpg:head_length_4	-93.859	505.146
+5	Oh_02_5_E_ventral.jpg:head_length_5	-93.799	513.128
+6	Oh_02_5_E_ventral.jpg:head_length_6	-93.393	506.889

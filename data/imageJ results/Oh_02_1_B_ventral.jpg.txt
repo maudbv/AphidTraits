@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	Oh_02_1_B_ventral.jpg:thorax_width_1	-2.887	913.159
+2	Oh_02_1_B_ventral.jpg:thorax_width_2	-3.615	919.830
+3	Oh_02_1_B_ventral.jpg:thorax_width_3	-3.756	915.967
+4	Oh_02_1_B_ventral.jpg:head_length_4	-102.008	644.093
+5	Oh_02_1_B_ventral.jpg:head_length_5	-102.120	638.226
+6	Oh_02_1_B_ventral.jpg:head_length_6	-102.295	638.649

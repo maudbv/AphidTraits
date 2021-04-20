@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	NB10_1_C_ocular tubercles.jpg:head_width_1	-12.478	1462.546
+2	NB10_1_C_ocular tubercles.jpg:head_width_2	-12.084	1452.176
+3	NB10_1_C_ocular tubercles.jpg:head_width_3	-12.291	1465.595

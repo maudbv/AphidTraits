@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	MS_R3B_B_ventral.jpg:thorax_width_1	-0.133	860.002
+2	MS_R3B_B_ventral.jpg:thorax_width_2	-0.400	860.021
+3	MS_R3B_B_ventral.jpg:thorax_width_3	-0.134	852.002
+4	MS_R3B_B_ventral.jpg:head_length_4	-104.415	586.464
+5	MS_R3B_B_ventral.jpg:head_length_5	-102.995	587.033
+6	MS_R3B_B_ventral.jpg:head_length_6	-101.233	585.211

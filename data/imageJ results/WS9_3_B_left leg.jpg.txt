@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	WS9_3_B_left leg.jpg:femur_length_left_1	18.365	1029.955
+2	WS9_3_B_left leg.jpg:femur_length_left_2	18.435	1015.091
+3	WS9_3_B_left leg.jpg:femur_length_left_3	18.119	1032.183
+4	WS9_3_B_left leg.jpg:tibia_length_left_4	-103.669	1701.180
+5	WS9_3_B_left leg.jpg:tibia_length_left_5	-103.430	1717.976
+6	WS9_3_B_left leg.jpg:tibia_length_left_6	-103.332	1717.282

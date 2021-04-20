@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Spandau R2B_D_ocular tubercles.jpg:head_width_1	-2.234	1693.287
+2	Spandau R2B_D_ocular tubercles.jpg:head_width_2	-1.219	1692.383
+3	Spandau R2B_D_ocular tubercles.jpg:head_width_3	-2.053	1675.075

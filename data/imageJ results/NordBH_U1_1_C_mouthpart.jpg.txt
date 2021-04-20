@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	NordBH_U1_1_C_mouthpart.jpg:rostrum_length_1	-99.260	932.148
+2	NordBH_U1_1_C_mouthpart.jpg:rostrum_length_2	-99.017	931.513
+3	NordBH_U1_1_C_mouthpart.jpg:rostrum_length_3	-100.228	934.856

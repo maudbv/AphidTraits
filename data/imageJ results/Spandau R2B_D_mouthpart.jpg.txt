@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Spandau R2B_D_mouthpart.jpg:rostrum_length_1	-36.010	986.511
+2	Spandau R2B_D_mouthpart.jpg:rostrum_length_2	144.341	984.620
+3	Spandau R2B_D_mouthpart.jpg:rostrum_length_3	-35.524	987.872

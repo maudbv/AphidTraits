@@ -1,0 +1,10 @@
+ 	Label	Angle	Length
+1	Oh_02_1_A_left leg.jpg:femur_length_left_1	-116.855	1235.220
+2	Oh_02_1_A_left leg.jpg:femur_length_left_2	-117.109	1224.526
+3	Oh_02_1_A_left leg.jpg:femur_length_left_3	-116.733	1222.687
+4	Oh_02_1_A_left leg.jpg:tibia_length_left_4	-141.961	2077.233
+5	Oh_02_1_A_left leg.jpg:tibia_length_left_5	38.608	2083.359
+6	Oh_02_1_A_left leg.jpg:tibia_length_left_6	38.299	2084.649
+7	Oh_02_1_A_left leg.jpg:tarsus_length_left_7	-120.710	309.386
+8	Oh_02_1_A_left leg.jpg:tarsus_length_left_8	-119.652	307.234
+9	Oh_02_1_A_left leg.jpg:tarsus_length_left_9	-120.838	312.128

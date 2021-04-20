@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Sk_2_B_ocular tubercles.jpg:head_width_1	1.042	1540.255
+2	Sk_2_B_ocular tubercles.jpg:head_width_2	0.600	1528.084
+3	Sk_2_B_ocular tubercles.jpg:head_width_3	0.598	1532.084

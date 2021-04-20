@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	MS_R3B_C_mouthpart.jpg:rostrum_length_1	-123.460	968.514
+2	MS_R3B_C_mouthpart.jpg:rostrum_length_2	-124.509	970.824
+3	MS_R3B_C_mouthpart.jpg:rostrum_length_3	-124.613	964.749

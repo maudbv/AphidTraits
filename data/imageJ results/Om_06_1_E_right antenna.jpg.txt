@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Om_06_1_E_right antenna.jpg:flag_length_right_1	-123.726	896.950
+2	Om_06_1_E_right antenna.jpg:flag_length_right_2	-124.581	891.511
+3	Om_06_1_E_right antenna.jpg:flag_length_right_3	-124.629	879.873

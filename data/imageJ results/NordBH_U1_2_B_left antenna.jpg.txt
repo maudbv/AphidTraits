@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	NordBH_U1_2_B_left antenna.jpg:flag_length_left_1	-29.994	912.160
+2	NordBH_U1_2_B_left antenna.jpg:flag_length_left_2	-29.948	909.428
+3	NordBH_U1_2_B_left antenna.jpg:flag_length_left_3	-30.491	914.462

@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Nl_55_5_D_ocular tubercles.jpg:head_width_1	-1.044	1536.255
+2	Nl_55_5_D_ocular tubercles.jpg:head_width_2	-0.449	1532.047
+3	Nl_55_5_D_ocular tubercles.jpg:head_width_3	-0.594	1544.083

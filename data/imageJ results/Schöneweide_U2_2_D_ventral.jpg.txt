@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	Schöneweide_U2_2_D_ventral.jpg:thorax_width_1	-3.754	885.901
+2	Schöneweide_U2_2_D_ventral.jpg:thorax_width_2	-2.473	880.820
+3	Schöneweide_U2_2_D_ventral.jpg:thorax_width_3	-2.979	885.196
+4	Schöneweide_U2_2_D_ventral.jpg:head_length_4	-102.896	609.370
+5	Schöneweide_U2_2_D_ventral.jpg:head_length_5	-102.813	613.270
+6	Schöneweide_U2_2_D_ventral.jpg:head_length_6	-102.713	608.927

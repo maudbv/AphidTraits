@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Sk_2_E_left antenna.jpg:flag_length_left_1	-48.691	702.908
+2	Sk_2_E_left antenna.jpg:flag_length_left_2	-48.435	696.337
+3	Sk_2_E_left antenna.jpg:flag_length_left_3	-48.074	698.920

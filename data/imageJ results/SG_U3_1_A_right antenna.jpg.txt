@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	SG_U3_1_A_right antenna.jpg:flag_length_right_1	-58.149	864.113
+2	SG_U3_1_A_right antenna.jpg:flag_length_right_2	-58.289	867.514
+3	SG_U3_1_A_right antenna.jpg:flag_length_right_3	-58.496	872.624

@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	NB10_1_C_right antenna.jpg:flag_length_right_1	-67.990	715.117
+2	NB10_1_C_right antenna.jpg:flag_length_right_2	-68.737	711.430
+3	NB10_1_C_right antenna.jpg:flag_length_right_3	-69.078	714.083

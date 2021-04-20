@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Schöneweide_U2_E_mouthpart.jpg:rostrum_length_1	-103.856	926.976
+2	Schöneweide_U2_E_mouthpart.jpg:rostrum_length_2	-104.096	936.188
+3	Schöneweide_U2_E_mouthpart.jpg:rostrum_length_3	-103.858	935.222

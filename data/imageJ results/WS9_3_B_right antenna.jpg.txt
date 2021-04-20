@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	WS9_3_B_right antenna.jpg:flag_length_right_1	-95.150	467.889
+2	WS9_3_B_right antenna.jpg:flag_length_right_2	-94.418	467.388
+3	WS9_3_B_right antenna.jpg:flag_length_right_3	-95.281	478.029

@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Wannsee_R1_E_right antenna.jpg:flag_length_right_1	-57.160	785.542
+2	Wannsee_R1_E_right antenna.jpg:flag_length_right_2	-57.416	776.170
+3	Wannsee_R1_E_right antenna.jpg:flag_length_right_3	-57.855	781.857

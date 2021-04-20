@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	WS9_3_C_mouthpart.jpg:rostrum_length_1	-52.787	902.816
+2	WS9_3_C_mouthpart.jpg:rostrum_length_2	-52.771	894.218
+3	WS9_3_C_mouthpart.jpg:rostrum_length_3	-52.377	897.678

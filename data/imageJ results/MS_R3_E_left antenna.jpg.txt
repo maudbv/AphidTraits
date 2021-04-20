@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	MS_R3_E_left antenna.jpg:flag_length_left_1	-61.770	708.238
+2	MS_R3_E_left antenna.jpg:flag_length_left_2	-61.402	706.147
+3	MS_R3_E_left antenna.jpg:flag_length_left_3	-62.009	701.001

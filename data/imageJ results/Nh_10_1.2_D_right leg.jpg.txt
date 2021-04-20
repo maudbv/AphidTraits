@@ -1,0 +1,10 @@
+ 	Label	Angle	Length
+1	Nh_10_1.2_D_right leg.jpg:femur_length_right_1	-17.562	934.561
+2	Nh_10_1.2_D_right leg.jpg:femur_length_right_2	-17.710	925.356
+3	Nh_10_1.2_D_right leg.jpg:femur_length_right_3	-18.080	918.343
+4	Nh_10_1.2_D_right leg.jpg:tibia_length_right_4	-51.340	1594.378
+5	Nh_10_1.2_D_right leg.jpg:tibia_length_right_5	-51.975	1607.127
+6	Nh_10_1.2_D_right leg.jpg:tibia_length_right_6	-51.608	1603.766
+7	Nh_10_1.2_D_right leg.jpg:tarsus_length_right_7	-40.030	261.197
+8	Nh_10_1.2_D_right leg.jpg:tarsus_length_right_8	-40.198	261.842
+9	Nh_10_1.2_D_right leg.jpg:tarsus_length_right_9	-41.103	260.110

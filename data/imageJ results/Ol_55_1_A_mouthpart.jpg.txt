@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Ol_55_1_A_mouthpart.jpg:rostrum_length_1	14.005	892.531
+2	Ol_55_1_A_mouthpart.jpg:rostrum_length_2	14.664	884.823
+3	Ol_55_1_A_mouthpart.jpg:rostrum_length_3	14.162	882.832

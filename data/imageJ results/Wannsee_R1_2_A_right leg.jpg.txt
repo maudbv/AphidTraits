@@ -1,0 +1,10 @@
+ 	Label	Angle	Length
+1	Wannsee_R1_2_A_right leg.jpg:femur_length_right_1	81.500	1096.038
+2	Wannsee_R1_2_A_right leg.jpg:femur_length_right_2	81.397	1096.336
+3	Wannsee_R1_2_A_right leg.jpg:femur_length_right_3	81.588	1093.766
+4	Wannsee_R1_2_A_right leg.jpg:tibia_length_right_4	-42.784	1902.125
+5	Wannsee_R1_2_A_right leg.jpg:tibia_length_right_5	-42.607	1896.700
+6	Wannsee_R1_2_A_right leg.jpg:tibia_length_right_6	-42.703	1905.063
+7	Wannsee_R1_2_A_right leg.jpg:tarsus_length_right_7	-85.587	298.886
+8	Wannsee_R1_2_A_right leg.jpg:tarsus_length_right_8	-85.047	301.125
+9	Wannsee_R1_2_A_right leg.jpg:tarsus_length_right_9	-85.156	296.057

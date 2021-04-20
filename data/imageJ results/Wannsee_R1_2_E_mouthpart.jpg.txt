@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Wannsee_R1_2_E_mouthpart.jpg:rostrum_length_1	-25.885	980.361
+2	Wannsee_R1_2_E_mouthpart.jpg:rostrum_length_2	-25.892	989.305
+3	Wannsee_R1_2_E_mouthpart.jpg:rostrum_length_3	-26.198	978.523

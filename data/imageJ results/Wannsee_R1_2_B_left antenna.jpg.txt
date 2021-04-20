@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Wannsee_R1_2_B_left antenna.jpg:flag_length_left_1	-125.965	810.501
+2	Wannsee_R1_2_B_left antenna.jpg:flag_length_left_2	-125.473	820.244
+3	Wannsee_R1_2_B_left antenna.jpg:flag_length_left_3	-126.254	818.447

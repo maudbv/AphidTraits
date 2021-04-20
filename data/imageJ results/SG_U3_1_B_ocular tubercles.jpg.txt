@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	SG_U3_1_B_ocular tubercles.jpg:head_width_1	-3.094	1630.377
+2	SG_U3_1_B_ocular tubercles.jpg:head_width_2	-2.416	1613.434
+3	SG_U3_1_B_ocular tubercles.jpg:head_width_3	-2.398	1625.423

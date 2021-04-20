@@ -1,0 +1,10 @@
+ 	Label	Angle	Length
+1	Sk_3_E_left leg.jpg:femur_length_left_1	95.602	942.501
+2	Sk_3_E_left leg.jpg:femur_length_left_2	95.747	938.718
+3	Sk_3_E_left leg.jpg:femur_length_left_3	95.563	928.373
+4	Sk_3_E_left leg.jpg:tibia_length_left_4	-35.379	1637.354
+5	Sk_3_E_left leg.jpg:tibia_length_left_5	-35.415	1630.726
+6	Sk_3_E_left leg.jpg:tibia_length_left_6	-35.942	1630.414
+7	Sk_3_E_left leg.jpg:tarsus_length_left_7	-16.309	281.320
+8	Sk_3_E_left leg.jpg:tarsus_length_left_8	-16.739	277.770
+9	Sk_3_E_left leg.jpg:tarsus_length_left_9	-16.002	275.683

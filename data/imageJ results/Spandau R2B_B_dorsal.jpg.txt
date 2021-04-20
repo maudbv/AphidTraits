@@ -1,0 +1,10 @@
+ 	Label	Angle	Length
+1	Spandau R2B_B_dorsal.jpg:body_width_1	1.112	618.116
+2	Spandau R2B_B_dorsal.jpg:body_width_2	1.315	610.161
+3	Spandau R2B_B_dorsal.jpg:body_width_3	0.372	616.013
+4	Spandau R2B_B_dorsal.jpg:body_length_4	-91.304	1581.410
+5	Spandau R2B_B_dorsal.jpg:body_length_5	-91.196	1581.344
+6	Spandau R2B_B_dorsal.jpg:body_length_6	-91.630	1581.640
+7	Spandau R2B_B_dorsal.jpg:abdomen_length_7	-88.421	2032.772
+8	Spandau R2B_B_dorsal.jpg:abdomen_length_8	-89.105	2048.250
+9	Spandau R2B_B_dorsal.jpg:abdomen_length_9	-88.762	2036.475

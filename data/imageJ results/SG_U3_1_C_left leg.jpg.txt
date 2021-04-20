@@ -1,0 +1,10 @@
+ 	Label	Angle	Length
+1	SG_U3_1_C_left leg.jpg:femur_length_left_1	-37.248	1273.828
+2	SG_U3_1_C_left leg.jpg:femur_length_left_2	-37.059	1274.407
+3	SG_U3_1_C_left leg.jpg:femur_length_left_3	-36.978	1276.802
+4	SG_U3_1_C_left leg.jpg:tibia_length_left_4	-127.224	2069.640
+5	SG_U3_1_C_left leg.jpg:tibia_length_left_5	-127.249	2055.245
+6	SG_U3_1_C_left leg.jpg:tibia_length_left_6	-127.359	2063.275
+7	SG_U3_1_C_left leg.jpg:tarsus_length_left_7	-103.661	296.385
+8	SG_U3_1_C_left leg.jpg:tarsus_length_left_8	-103.420	293.000
+9	SG_U3_1_C_left leg.jpg:tarsus_length_left_9	-103.564	294.206

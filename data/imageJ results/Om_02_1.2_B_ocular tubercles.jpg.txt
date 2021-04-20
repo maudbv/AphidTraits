@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Om_02_1.2_B_ocular tubercles.jpg:head_width_1	-3.691	1491.094
+2	Om_02_1.2_B_ocular tubercles.jpg:head_width_2	-4.259	1508.164
+3	Om_02_1.2_B_ocular tubercles.jpg:head_width_3	-3.977	1499.611

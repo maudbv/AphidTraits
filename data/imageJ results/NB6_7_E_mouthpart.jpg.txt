@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	NB6_7_E_mouthpart.jpg:rostrum_length_1	68.176	963.016
+2	NB6_7_E_mouthpart.jpg:rostrum_length_2	67.352	955.692
+3	NB6_7_E_mouthpart.jpg:rostrum_length_3	67.296	943.078

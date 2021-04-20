@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Wannsee_R1_C_ocular tubercles.jpg:head_width_1	1.176	1364.287
+2	Wannsee_R1_C_ocular tubercles.jpg:head_width_2	0.672	1364.094
+3	Wannsee_R1_C_ocular tubercles.jpg:head_width_3	1.516	1360.476

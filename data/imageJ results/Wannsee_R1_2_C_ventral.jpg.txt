@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	Wannsee_R1_2_C_ventral.jpg:thorax_width_1	-4.514	838.601
+2	Wannsee_R1_2_C_ventral.jpg:thorax_width_2	-4.821	832.947
+3	Wannsee_R1_2_C_ventral.jpg:thorax_width_3	-4.172	852.258
+4	Wannsee_R1_2_C_ventral.jpg:head_length_4	-94.304	559.578
+5	Wannsee_R1_2_C_ventral.jpg:head_length_5	-94.713	559.893
+6	Wannsee_R1_2_C_ventral.jpg:head_length_6	-94.493	561.726

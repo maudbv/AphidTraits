@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	NB6_7_E_right leg.jpg:femur_length_right_1	77.550	1103.960
+2	NB6_7_E_right leg.jpg:femur_length_right_2	77.674	1105.485
+3	NB6_7_E_right leg.jpg:femur_length_right_3	77.358	1096.586

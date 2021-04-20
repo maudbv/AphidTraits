@@ -1,0 +1,10 @@
+ 	Label	Angle	Length
+1	Spandau_R2_E_left leg.jpg:femur_length_left_1	-107.266	1084.887
+2	Spandau_R2_E_left leg.jpg:femur_length_left_2	-107.165	1084.295
+3	Spandau_R2_E_left leg.jpg:femur_length_left_3	-107.632	1082.870
+4	Spandau_R2_E_left leg.jpg:tibia_length_left_4	125.882	1856.276
+5	Spandau_R2_E_left leg.jpg:tibia_length_left_5	125.815	1825.109
+6	Spandau_R2_E_left leg.jpg:tibia_length_left_6	125.826	1845.106
+7	Spandau_R2_E_left leg.jpg:tarsus_length_left_7	-71.696	277.016
+8	Spandau_R2_E_left leg.jpg:tarsus_length_left_8	-72.146	280.508
+9	Spandau_R2_E_left leg.jpg:tarsus_length_left_9	-72.216	278.298

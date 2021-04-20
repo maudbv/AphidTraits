@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	Nh_10_3_E_ventral.jpg:thorax_width_1	-3.161	752.645
+2	Nh_10_3_E_ventral.jpg:thorax_width_2	-4.950	764.853
+3	Nh_10_3_E_ventral.jpg:thorax_width_3	-4.293	748.099
+4	Nh_10_3_E_ventral.jpg:head_length_4	-97.896	553.245
+5	Nh_10_3_E_ventral.jpg:head_length_5	-97.839	557.207
+6	Nh_10_3_E_ventral.jpg:head_length_6	-98.130	551.543

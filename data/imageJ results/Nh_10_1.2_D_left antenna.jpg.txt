@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Nh_10_1.2_D_left antenna.jpg:flag_length_left_1	-99.543	699.683
+2	Nh_10_1.2_D_left antenna.jpg:flag_length_left_2	-99.489	703.628
+3	Nh_10_1.2_D_left antenna.jpg:flag_length_left_3	-99.866	700.357

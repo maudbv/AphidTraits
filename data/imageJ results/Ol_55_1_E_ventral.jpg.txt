@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	Ol_55_1_E_ventral.jpg:head_length_1	2.012	740.457
+2	Ol_55_1_E_ventral.jpg:thorax_width_2	3.248	741.191
+3	Ol_55_1_E_ventral.jpg:thorax_width_3	2.161	742.528
+4	Ol_55_1_E_ventral.jpg:head_length_4	-103.977	471.975
+5	Ol_55_1_E_ventral.jpg:head_length_5	-104.096	468.094
+6	Ol_55_1_E_ventral.jpg:head_length_6	-104.387	474.894

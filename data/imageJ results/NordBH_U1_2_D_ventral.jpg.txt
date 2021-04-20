@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	NordBH_U1_2_D_ventral.jpg:thorax_width_1	-5.859	920.811
+2	NordBH_U1_2_D_ventral.jpg:thorax_width_2	-7.810	912.465
+3	NordBH_U1_2_D_ventral.jpg:thorax_width_3	-7.453	909.686
+4	NordBH_U1_2_D_ventral.jpg:head_length_4	-99.529	567.834
+5	NordBH_U1_2_D_ventral.jpg:head_length_5	-98.998	578.621
+6	NordBH_U1_2_D_ventral.jpg:head_length_6	-99.694	570.140

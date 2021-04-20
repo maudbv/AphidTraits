@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Ol_55_3_C_left antenna.jpg:flag_length_left_1	-42.834	673.647
+2	Ol_55_3_C_left antenna.jpg:flag_length_left_2	-42.821	669.407
+3	Ol_55_3_C_left antenna.jpg:flag_length_left_3	-42.883	670.087

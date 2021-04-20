@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Ol_55_5_A_right antenna.jpg:flag_length_right_1	36.222	778.450
+2	Ol_55_5_A_right antenna.jpg:flag_length_right_2	36.459	780.820
+3	Ol_55_5_A_right antenna.jpg:flag_length_right_3	36.230	788.449

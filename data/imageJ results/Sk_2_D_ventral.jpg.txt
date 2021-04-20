@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	Sk_2_D_ventral.jpg:thorax_width_1	-9.732	769.067
+2	Sk_2_D_ventral.jpg:thorax_width_2	-9.904	767.437
+3	Sk_2_D_ventral.jpg:thorax_width_3	-9.707	771.038
+4	Sk_2_D_ventral.jpg:head_length_4	-103.731	455.003
+5	Sk_2_D_ventral.jpg:head_length_5	-103.976	463.728
+6	Sk_2_D_ventral.jpg:head_length_6	-103.562	469.080

@@ -1,0 +1,10 @@
+ 	Label	Angle	Length
+1	Ol_55_5_D_right leg.jpg:femur_length_right_1	56.940	1059.541
+2	Ol_55_5_D_right leg.jpg:femur_length_right_2	57.186	1051.835
+3	Ol_55_5_D_right leg.jpg:femur_length_right_3	57.271	1057.962
+4	Ol_55_5_D_right leg.jpg:tibia_length_right_4	-51.485	1859.567
+5	Ol_55_5_D_right leg.jpg:tibia_length_right_5	-51.832	1854.476
+6	Ol_55_5_D_right leg.jpg:tibia_length_right_6	-51.542	1861.915
+7	Ol_55_5_D_right leg.jpg:tarsus_length_right_7	-69.796	266.391
+8	Ol_55_5_D_right leg.jpg:tarsus_length_right_8	-70.274	266.648
+9	Ol_55_5_D_right leg.jpg:tarsus_length_right_9	-70.258	263.486

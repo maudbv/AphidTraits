@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Oh_02_5_B_left antenna.jpg:flag_length_left_1	33.130	907.533
+2	Oh_02_5_B_left antenna.jpg:flag_length_left_2	32.658	893.212
+3	Oh_02_5_B_left antenna.jpg:flag_length_left_3	32.987	903.675

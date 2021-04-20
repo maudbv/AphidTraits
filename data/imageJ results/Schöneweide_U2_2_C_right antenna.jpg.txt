@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Schöneweide_U2_2_C_right antenna.jpg:flag_length_right_1	-44.523	849.972
+2	Schöneweide_U2_2_C_right antenna.jpg:flag_length_right_2	-44.333	850.000
+3	Schöneweide_U2_2_C_right antenna.jpg:flag_length_right_3	-44.905	855.600

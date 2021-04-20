@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	SG_U3_1_E_ventral.jpg:thorax_width_1	-2.094	930.621
+2	SG_U3_1_E_ventral.jpg:thorax_width_2	-2.490	920.869
+3	SG_U3_1_E_ventral.jpg:thorax_width_3	-2.231	924.701
+4	SG_U3_1_E_ventral.jpg:head_length_4	-102.281	601.771
+5	SG_U3_1_E_ventral.jpg:head_length_5	-101.760	598.565
+6	SG_U3_1_E_ventral.jpg:head_length_6	-101.310	601.684

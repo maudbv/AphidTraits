@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Spandau R2B_B_left antenna.jpg:flag_length_left_1	67.380	884.000
+2	Spandau R2B_B_left antenna.jpg:flag_length_left_2	66.870	880.804
+3	Spandau R2B_B_left antenna.jpg:flag_length_left_3	66.699	879.755

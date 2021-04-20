@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	NB10_1_B_ventral.jpg:thorax_width_1	-5.492	835.837
+2	NB10_1_B_ventral.jpg:thorax_width_2	-5.330	839.631
+3	NB10_1_B_ventral.jpg:thorax_width_3	-5.453	841.810
+4	NB10_1_B_ventral.jpg:head_length_4	-107.753	531.300
+5	NB10_1_B_ventral.jpg:head_length_5	-106.474	536.004
+6	NB10_1_B_ventral.jpg:head_length_6	-107.103	544.059

@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Nh_10_1.2_A_mouthpart.jpg:rostrum_length_1	136.028	867.052
+2	Nh_10_1.2_A_mouthpart.jpg:rostrum_length_2	136.127	862.837
+3	Nh_10_1.2_A_mouthpart.jpg:rostrum_length_3	136.227	858.624

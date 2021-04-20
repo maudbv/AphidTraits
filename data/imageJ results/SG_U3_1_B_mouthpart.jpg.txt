@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	SG_U3_1_B_mouthpart.jpg:rostrum_length_1	161.117	970.216
+2	SG_U3_1_B_mouthpart.jpg:rostrum_length_2	160.378	976.721
+3	SG_U3_1_B_mouthpart.jpg:rostrum_length_3	160.330	968.514

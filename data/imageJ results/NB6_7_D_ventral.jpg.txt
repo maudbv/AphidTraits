@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	NB6_7_D_ventral.jpg:thorax_width_1	-5.109	853.391
+2	NB6_7_D_ventral.jpg:thorax_width_2	-4.574	852.716
+3	NB6_7_D_ventral.jpg:thorax_width_3	-5.121	851.399
+4	NB6_7_D_ventral.jpg:head_length_4	-102.841	557.953
+5	NB6_7_D_ventral.jpg:head_length_5	-102.440	557.078
+6	NB6_7_D_ventral.jpg:head_length_6	-101.510	561.288

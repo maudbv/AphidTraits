@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Om_06_1_E_mouthpart.jpg:rostrum_length_1	-174.398	942.501
+2	Om_06_1_E_mouthpart.jpg:rostrum_length_2	-175.257	943.231
+3	Om_06_1_E_mouthpart.jpg:rostrum_length_3	-176.097	940.181

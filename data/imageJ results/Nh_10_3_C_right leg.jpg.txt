@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	Nh_10_3_C_right leg.jpg:femur_length_right_1	1.939	768.440
+2	Nh_10_3_C_right leg.jpg:femur_length_right_2	3.449	731.325
+3	Nh_10_3_C_right leg.jpg:femur_length_right_3	3.119	735.089
+4	Nh_10_3_C_right leg.jpg:tibia_length_right_4	-157.929	1301.367
+5	Nh_10_3_C_right leg.jpg:tibia_length_right_5	-157.757	1299.720
+6	Nh_10_3_C_right leg.jpg:tibia_length_right_6	-158.715	1297.506

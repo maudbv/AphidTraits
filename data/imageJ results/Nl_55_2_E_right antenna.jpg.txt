@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Nl_55_2_E_right antenna.jpg:flag_length_right_1	-145.181	704.051
+2	Nl_55_2_E_right antenna.jpg:flag_length_right_2	-145.584	700.643
+3	Nl_55_2_E_right antenna.jpg:flag_length_right_3	-145.347	692.918

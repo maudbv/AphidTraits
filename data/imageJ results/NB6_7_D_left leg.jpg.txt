@@ -1,0 +1,10 @@
+ 	Label	Angle	Length
+1	NB6_7_D_left leg.jpg:femur_length_left_1	78.465	1200.240
+2	NB6_7_D_left leg.jpg:femur_length_left_2	78.709	1195.132
+3	NB6_7_D_left leg.jpg:femur_length_left_3	78.690	1193.171
+4	NB6_7_D_left leg.jpg:tibia_length_left_4	43.989	2084.875
+5	NB6_7_D_left leg.jpg:tibia_length_left_5	43.217	2091.220
+6	NB6_7_D_left leg.jpg:tibia_length_left_6	43.519	2079.588
+7	NB6_7_D_left leg.jpg:tarsus_length_left_7	-120.324	307.002
+8	NB6_7_D_left leg.jpg:tarsus_length_left_8	-120.705	303.556
+9	NB6_7_D_left leg.jpg:tarsus_length_left_9	-120.964	309.040

@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	Schöneweide_U2_2_C_right leg.jpg:femur_length_right_1	-115.405	1258.717
+2	Schöneweide_U2_2_C_right leg.jpg:femur_length_right_2	-114.842	1249.632
+3	Schöneweide_U2_2_C_right leg.jpg:femur_length_right_3	-115.194	1233.321
+4	Schöneweide_U2_2_C_right leg.jpg:tibia_length_right_4	-6.322	2124.924
+5	Schöneweide_U2_2_C_right leg.jpg:tibia_length_right_5	-6.465	2131.554
+6	Schöneweide_U2_2_C_right leg.jpg:tibia_length_right_6	-6.570	2150.119

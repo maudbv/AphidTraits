@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	MS_R3_D_ocular tubercles.jpg:head_width_1	-3.122	1542.289
+2	MS_R3_D_ocular tubercles.jpg:head_width_2	-3.122	1542.289
+3	MS_R3_D_ocular tubercles.jpg:head_width_3	-3.288	1534.525

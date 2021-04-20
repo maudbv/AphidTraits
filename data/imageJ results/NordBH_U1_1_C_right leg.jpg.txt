@@ -1,0 +1,10 @@
+ 	Label	Angle	Length
+1	NordBH_U1_1_C_right leg.jpg:femur_length_right_1	23.824	1262.587
+2	NordBH_U1_1_C_right leg.jpg:femur_length_right_2	23.745	1281.478
+3	NordBH_U1_1_C_right leg.jpg:femur_length_right_3	23.784	1272.032
+4	NordBH_U1_1_C_right leg.jpg:tibia_length_right_4	-124.050	2051.183
+5	NordBH_U1_1_C_right leg.jpg:tibia_length_right_5	-124.150	2073.536
+6	NordBH_U1_1_C_right leg.jpg:tibia_length_right_6	-124.400	2060.315
+7	NordBH_U1_1_C_right leg.jpg:tarsus_length_right_7	-140.293	298.967
+8	NordBH_U1_1_C_right leg.jpg:tarsus_length_right_8	-139.357	297.846
+9	NordBH_U1_1_C_right leg.jpg:tarsus_length_right_9	-139.461	300.015

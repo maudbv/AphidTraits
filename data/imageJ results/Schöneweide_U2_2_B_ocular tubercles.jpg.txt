@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Schöneweide_U2_2_B_ocular tubercles.jpg:head_width_1	-3.324	1586.669
+2	Schöneweide_U2_2_B_ocular tubercles.jpg:head_width_2	-3.486	1578.921
+3	Schöneweide_U2_2_B_ocular tubercles.jpg:head_width_3	-3.766	1583.419

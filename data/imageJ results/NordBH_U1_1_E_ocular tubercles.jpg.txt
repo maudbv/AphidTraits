@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	NordBH_U1_1_E_ocular tubercles.jpg:head_width_1	-3.542	1683.216
+2	NordBH_U1_1_E_ocular tubercles.jpg:head_width_2	-4.201	1692.548
+3	NordBH_U1_1_E_ocular tubercles.jpg:head_width_3	-3.959	1680.010

@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	Spandau R2B_E_ventral.jpg:thorax_width_1	0.374	918.020
+2	Spandau R2B_E_ventral.jpg:thorax_width_2	0.250	918.009
+3	Spandau R2B_E_ventral.jpg:thorax_width_3	1.491	922.312
+4	Spandau R2B_E_ventral.jpg:head_length_4	-109.738	639.578
+5	Spandau R2B_E_ventral.jpg:head_length_5	-108.886	642.595
+6	Spandau R2B_E_ventral.jpg:head_length_6	-108.771	646.381

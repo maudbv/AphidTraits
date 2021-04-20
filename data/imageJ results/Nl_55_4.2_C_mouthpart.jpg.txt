@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Nl_55_4.2_C_mouthpart.jpg:rostrum_length_1	0.756	910.079
+2	Nl_55_4.2_C_mouthpart.jpg:rostrum_length_2	1.136	908.178
+3	Nl_55_4.2_C_mouthpart.jpg:rostrum_length_3	0.881	910.108

@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Sk_2_C_mouthpart.jpg:rostrum_length_1	-42.827	932.637
+2	Sk_2_C_mouthpart.jpg:rostrum_length_2	-43.091	933.899
+3	Sk_2_C_mouthpart.jpg:rostrum_length_3	-42.241	940.128

@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	Om_06_3_A_ventral.jpg:thorax_width_1	0.815	844.085
+2	Om_06_3_A_ventral.jpg:thorax_width_2	0.277	826.010
+3	Om_06_3_A_ventral.jpg:thorax_width_3	-1.121	818.156
+4	Om_06_3_A_ventral.jpg:head_length_4	-104.036	544.250
+5	Om_06_3_A_ventral.jpg:head_length_5	-104.638	553.982
+6	Om_06_3_A_ventral.jpg:head_length_6	-104.733	558.358

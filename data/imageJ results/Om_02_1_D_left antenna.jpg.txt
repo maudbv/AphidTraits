@@ -1,0 +1,4 @@
+ 	Label	Angle	Length
+1	Om_02_1_D_left antenna.jpg:flag_length_left_1	-63.869	944.542
+2	Om_02_1_D_left antenna.jpg:flag_length_left_2	-63.598	940.047
+3	Om_02_1_D_left antenna.jpg:flag_length_left_3	-63.543	951.672

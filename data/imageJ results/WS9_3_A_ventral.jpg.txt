@@ -1,0 +1,7 @@
+ 	Label	Angle	Length
+1	WS9_3_A_ventral.jpg:thorax_width_1	-3.090	853.241
+2	WS9_3_A_ventral.jpg:thorax_width_2	-1.744	854.396
+3	WS9_3_A_ventral.jpg:thorax_width_3	-2.984	845.146
+4	WS9_3_A_ventral.jpg:head_length_4	-111.682	535.918
+5	WS9_3_A_ventral.jpg:head_length_5	-111.525	539.637
+6	WS9_3_A_ventral.jpg:head_length_6	-110.183	539.103
