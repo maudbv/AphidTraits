@@ -120,23 +120,20 @@ aphid_traits$Trait.type <- str_replace_all(aphid_traits$Trait.type,
 aphid_traits <- aphid_traits[, -which(colnames(aphid_traits) %in% c( "V1", "colony_judith","PlotA", "PlotB"))] 
 
 # Calculate mean across 3 replicate measures ####
-tmp <- doBy::summaryBy(formula = Length ~ ID_plot + Colony + Individual + Trait.type + Trait + side + Part,
-                id = ~ collector + date_collected + PhotoName,
-                data = aphid_traits,
-                FUN = mean,
-                keep.names = TRUE)
-
-# Sum part A and B when useful 
-tmp <- doBy::summaryBy(formula = Length ~ ID_plot + Colony + Individual + Trait.type + Trait + side,
-                       id = ~ collector + date_collected + PhotoName,
-                       data = tmp,
-                       FUN = sum,
-                       keep.names = TRUE)
-
+aphid_traits <- aphid_traits %>% 
+  group_by(collector, date_collected, PhotoName, ID_plot,Colony,Individual, Trait.type,Trait, side, Part ) %>%
+  summarise(count = n(),
+            Length.mean = mean(Length))%>%
+  group_by(collector, date_collected, PhotoName, ID_plot,Colony,Individual, Trait.type,Trait, side, Part, count) %>%
+  summarise(Length.mean = sum(Length.mean))
 
 # check out data quickly
-boxplot(Length ~ ID_plot:collector,
-        data = tmp[tmp$Trait.type=="body_width",], las = 2)
+par(mar = c(10,4,2,2))
+aphid_traits %>%
+  filter(Trait.type=="body_length") %>%
+  ggplot( aes(x = Length.mean, y = ID_plot,
+              fill = as.factor(collector))) +
+  geom_boxplot()
 
 # import and reformat metadata on photo magnification and scale ####
 
