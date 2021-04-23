@@ -1,6 +1,6 @@
 # Import aphid trait data
 
-# Length measurements from image analyses ####
+# extract length measurements from image analyses ####
 
 ## import and assemble files
 
@@ -11,15 +11,15 @@ list_of_files = list.files(path = "data/imageJ results/",
                            full.names = TRUE)
 
 # read and bind all text files
-df_results <-   purrr::map_dfr(.f = data.table::fread,
+aphid_df<-   purrr::map_dfr(.f = data.table::fread,
                               .x = list_of_files,
                               data.table = FALSE)
 
 # Change to latin-1 encoding to deal with german special characters
-Encoding(df_results$Label) <- "latin1"
+Encoding(aphid_df$Label) <- "latin1"
 
 ## extract informatino from label
-aphid_traits = df_results %>%
+aphid_df = aphid_df %>%
   separate(Label,
            into = c("PhotoName", "TraitLabel"),
            sep = ":",
@@ -30,19 +30,36 @@ plot_names <- fread("data/table of spotnames_maud.csv", data.table = FALSE)
 
 # Add new columns for ID_plot, collector and date of collection
 for (i in unique(plot_names$`name of image`)){
-  ind <- grep(pattern = i, x = aphid_traits$PhotoName)
-  aphid_traits[ind, "ID_plot"] <- 
+  ind <- grep(pattern = i, x = aphid_df$PhotoName)
+  
+  # Only for judith plot names
+  if( plot_names[plot_names$`name of image` == i,
+                 "collector"] =="Judith"){
+  # Account for some of the Judith plot with ambiguous names
+  # e.g. U2_ vs. U2_2
+  ind1 <- grep(pattern = paste(i,"1", sep = ""),
+               x = aphid_df$PhotoName)
+  if (length(ind1) >0) ind <- ind[which(!ind %in% ind1)]
+  
+  ind2 <- grep(pattern = paste(i,"2", sep = ""),
+               x = aphid_df$PhotoName)
+    if (length(ind2) >0) ind <- ind[which(!ind %in% ind2)]
+
+  }
+  
+  # extract info for the plot:
+  aphid_df[ind, "ID_plot"] <- 
     plot_names[plot_names$`name of image` == i, "ID_plot"]
-  aphid_traits[ind, "collector"] <- 
+  aphid_df[ind, "collector"] <- 
     plot_names[plot_names$`name of image` == i, "collector"]
-  aphid_traits[ind, "date_collected"] <- 
+  aphid_df[ind, "date_collected"] <- 
     plot_names[plot_names$`name of image` == i, "date collected"]
-  aphid_traits[ind, "colony_judith"] <- 
+  aphid_df[ind, "colony_judith"] <- 
     plot_names[plot_names$`name of image` == i, "Colony"]
 }
 
 # Divide the photo name into 5 columns:
-aphid_traits <- aphid_traits %>%
+aphid_df <- aphid_df %>%
   separate(PhotoName,
            into = c("PlotA", "PlotB",
                     "ColonyNumber","Individual_letter", "PhotoType"),
@@ -53,86 +70,110 @@ aphid_traits <- aphid_traits %>%
 
 # Correct columns for Sudkreuz plot
 # replace with the correct columns:
-aphid_traits[which(aphid_traits$ID_plot == "Sk_01"),
+aphid_df[which(aphid_df$ID_plot == "Sk_01"),
              c("ColonyNumber","Individual_letter", "PhotoType")] <-
-  aphid_traits[which(aphid_traits$ID_plot == "Sk_01"),
+  aphid_df[which(aphid_df$ID_plot == "Sk_01"),
                c("PlotB", "ColonyNumber","Individual_letter")]
 
-# Correct columns for the judith samples, 
-# since they have no colony number :
-aphid_traits[aphid_traits$collector == "Judith",
-             c("Individual_letter", "PhotoType")] <-
-  aphid_traits[aphid_traits$collector == "Judith",
-               c("ColonyNumber","Individual_letter")]
+# Correct columns for some of the judith samples, 
+# Spandau R2B is special::
+aphid_df[which(aphid_df$PlotA == "Spandau R2B"),
+         c("Individual_letter", "PhotoType")] <-
+  aphid_df[which(aphid_df$PlotA == "Spandau R2B"),
+           c("PlotB", "ColonyNumber")]
 
-# replace colony number by identifier f
-aphid_traits[aphid_traits$collector == "Judith","ColonyNumber"] <- aphid_traits[aphid_traits$collector == "Judith","colony_judith"]
+# since they have no colony number :
+aphid_df[which(aphid_df$collector == "Judith" & 
+                 !aphid_df$ColonyNumber %in% c(1,2) &
+                 aphid_df$PlotA != "Spandau R2B"),
+         c("Individual_letter", "PhotoType")] <-
+  aphid_df[which(aphid_df$collector == "Judith" & 
+                   !aphid_df$ColonyNumber %in% c(1,2)&
+                   aphid_df$PlotA != "Spandau R2B"),
+           c("ColonyNumber","Individual_letter")]
+
+
+# replace colony number by identifier 
+aphid_df[aphid_df$collector == "Judith","ColonyNumber"] <- aphid_df[aphid_df$collector == "Judith","colony_judith"]
 
 # Create a unique identifier for each individual aphid:
-aphid_traits$Colony <- paste(aphid_traits$ID_plot, 
-                                 aphid_traits$ColonyNumber,
+aphid_df$Colony <- paste(aphid_df$ID_plot, 
+                                 aphid_df$ColonyNumber,
                                  sep = "-")
 
 
 # Create a unique identifier for each individual aphid:
-aphid_traits$Individual <- paste(aphid_traits$Colony,
-                                 aphid_traits$Individual_letter,
+aphid_df$Individual <- paste(aphid_df$Colony,
+                                 aphid_df$Individual_letter,
                                  sep = "-")
 
 
 
 # Extract name of trait and "part" = when trait measure was cut into two parts
-aphid_traits <- aphid_traits %>%
+aphid_df <- aphid_df %>%
   separate(TraitLabel, into = c("Trait","Part"),
            sep = "_part", remove = FALSE)
 
 # extract "Rep": the replication number of each trait measurement
 # (should be three unique numbers per trait)
-aphid_traits$Rep = str_extract(aphid_traits$Trait, "\\d+")
+aphid_df$Rep = str_extract(aphid_df$Trait, "\\d+")
+
+
+# Check for left-right inconsistencies between photo name and trait label
+false_right <- intersect(grep("left", aphid_df$PhotoName), 
+                         grep( "right",aphid_df$Trait))
+aphid_df[false_right, "Trait"] <- sub(pattern = "right",
+                                      replacement = "left",
+                                      aphid_df[false_right, "Trait"])
+
+false_left <- intersect(grep("right", aphid_df$PhotoName), 
+                        grep( "left",aphid_df$Trait))
+aphid_df[false_left, "Trait"] <- sub(pattern = "left",
+                                      replacement = "right",
+                                      aphid_df[false_left, "Trait"])
 
 # Extract "side": when appropriate, left or right measurement
-aphid_traits$side <- NA
-aphid_traits$side[grep( "left",aphid_traits$Trait)] <- "left"
-aphid_traits$side[grep( "right",aphid_traits$Trait)] <- "right"
-
+aphid_df$side <- NA
+aphid_df$side[grep( "left",aphid_df$Trait)] <- "left"
+aphid_df$side[grep( "right",aphid_df$Trait)] <- "right"
 
 # extract "Trait.type": the generic type of trait (e.g. "antenna length")
 # without the information about left or right
-aphid_traits$Trait.type = sapply(aphid_traits$Trait, function(x) {
+aphid_df$Trait.type = sapply(aphid_df$Trait, function(x) {
   paste(str_split(x,pattern = "_",simplify = TRUE)[1:2], collapse = "_")
 })
 
 # extract "Trait": the full trait name including "left" or "right"
-aphid_traits$Trait = sapply(aphid_traits$Trait, function(x) {
+aphid_df$Trait = sapply(aphid_df$Trait, function(x) {
   y = str_split(x,pattern = "_",simplify = TRUE)
   return(paste(y[1:length(y)-1], collapse = "_"))
 })
 
 # Check if trait names make sense:
-sort(unique(aphid_traits$Trait))
+sort(unique(aphid_df$Trait))
 # replace "flag" by ANT3 for the third antenna segment measured?
-aphid_traits$Trait <- str_replace_all(aphid_traits$Trait,
+aphid_df$Trait <- str_replace_all(aphid_df$Trait,
                 pattern = "flag",
                 replacement = "ant3")
 
-aphid_traits$Trait.type <- str_replace_all(aphid_traits$Trait.type,
+aphid_df$Trait.type <- str_replace_all(aphid_df$Trait.type,
                 pattern = "flag",
                 replacement = "ant3")
 
 # Clean up unnecessary columns:
-aphid_traits <- aphid_traits[, -which(colnames(aphid_traits) %in% c( "V1", "colony_judith","PlotA", "PlotB"))] 
+aphid_df <- aphid_df[, -which(colnames(aphid_df) %in% c( "V1", "colony_judith","PlotA", "PlotB"))] 
 
 # Calculate mean across 3 replicate measures ####
-aphid_traits <- aphid_traits %>% 
+aphid_traits <- aphid_df %>% 
   group_by(collector, date_collected, PhotoName, ID_plot,Colony,Individual, Trait.type,Trait, side, Part) %>%
 summarise(count.reps = n(),
-            Length.pix.mean = mean(Length))
+            Length.pix.mean = mean(Length, na.rm = TRUE))
 
 # sum parts 1 and 2
 aphid_traits <- aphid_traits %>%
   group_by(collector, date_collected, PhotoName, ID_plot,Colony,Individual, Trait.type,Trait, side, count.reps) %>%
   summarise(count.parts = n(),
-            Length.pix.mean = sum(Length.pix.mean))
+            Length.pix.mean = sum(Length.pix.mean, na.rm = TRUE))
 
 # import and reformat metadata on photo magnification and scale ####
 
@@ -141,8 +182,12 @@ library(rio)
 data_list <- rio::import_list("data/Checklist 2020_maud edits.xlsx",
                          setclass = "data.table")
 # Sheet 17 is empty ?
-data_list <- data_list[-17]
-
+#  data_list[17] is "Südgelände U3 29.8.19"
+# CHOICE: fill the missing info by copying the previous datasheet
+# all of judith's plot appear to have similar settings
+# so it is a reasonable assumption
+data_list[17] <- data_list[16] 
+data_list[[17]]$comment <- " missing info was filled by copying  `Schöneweide U2.2 7.8.19`"
 # bind together all data sheets
 magnif_data <- rbindlist(data_list, fill = TRUE, id = TRUE)
 
@@ -228,16 +273,6 @@ magnif_df$PhotoName <- gsub(pattern = "___", replacement = "_", magnif_df$PhotoN
 magnif_df$PhotoName <- gsub(pattern = "__", replacement = "_", magnif_df$PhotoName)
 magnif_df$PhotoName <- paste(magnif_df$PhotoName, ".jpg", sep = "")
 
-## MISSING: 16 Photos which should have been measured (according to the checklist) but do not appear in aphid_traits:
-missing_measurements <- magnif_df[which(
-  !(magnif_df$PhotoName %in% aphid_traits$PhotoName) &
-    !is.na(magnif_df$Magnification) &
-    (magnif_df$Magnification!= "NA")),]
-# e.g. "Ol_55_1_B_left leg" and "Ol_55_1_B_right leg" 
-# do not appear because the pictures had a different name:
-# "Ol_55_1_B_legs L&R"
-# which was not automatically selectionned by the aphid trait plugin...
-
 # merge tables by photo index ####
 
 aphid_traits = merge( aphid_traits,
@@ -258,4 +293,58 @@ aphid_traits$Length.mm <- aphid_traits$Length.pix.mean/
 # clean up columns
 
 
-#>>>>>>> still some weird stuff with Judith's indiviual names
+### Check for duplicates and mistakes #######
+
+# identify individuals with multiple trait measurements:
+x = table(aphid_traits$Individual, aphid_traits$Trait)
+
+# Which are apparently measured more than once ?
+length(duplicated_individuals <- rownames(x) [rowSums(x >1)>0])
+# NO more obvious REMAINING DUPLICATED
+
+## STILL MISSING: Photos which should have been measured (according to the checklist) but do not appear in aphid_traits:
+missing_measurements <- magnif_df[which(
+  !(magnif_df$PhotoName %in% aphid_traits$PhotoName) &
+    !is.na(magnif_df$Magnification) &
+    (magnif_df$Magnification!= "NA")),]
+
+nrow(missing_measurements) #34 
+# BUT: 2 individuals (D and E) are actually really missing from Judith's SG_U3_2, plus a few body parts of other individuals, so not real mistakes we can fix.
+missing_measurements <- 
+  missing_measurements[
+    -which(missing_measurements$name_match == "Südgelände U3 29.8.19"),]
+
+nrow(missing_measurements)
+# 16 missing measurements for some photos with non-standard names
+# -------> to check and update only if we have time.
+
+# SOME mistakes due to 2 parts (left and right) on same picture:
+# e.g. "Ol_55_1_B_left leg" and "Ol_55_1_B_right leg" 
+# do not appear because the pictures had a different name:
+# "Ol_55_1_B_legs L&R" which was not ignored by the aphid trait plugin...
+
+# Two due to typos on "ocular tubercles"
+
+
+# Create a "wide" data table version of aphid traits  ####
+# wide = organised with traits as columns
+
+aphid_traits_wide <- reshape(
+  aphid_traits[,c("ID_plot",
+                  "Colony","Individual",
+                  "date_collected","collector",
+                  "Trait", "Length.mm")],
+  v.names = "Length.mm",
+  idvar = c("ID_plot",
+            "Colony","Individual",
+            "date_collected","collector"),
+  timevar = "Trait",
+  direction = "wide")
+
+names(aphid_traits_wide) <- sub(pattern = "Length.mm.", replacement = "",
+                   names(aphid_traits_wide))
+
+# Still some missing info to check!! ---> elena
+
+# clean up ####
+rm(tmp, 

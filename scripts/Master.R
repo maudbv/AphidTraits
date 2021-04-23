@@ -12,6 +12,9 @@ library(data.table)
 
 library(lme4)
 library(lmerTest)
+library(performance)
+library(r2glmm)
+
 # Import and modify data ####
 ## Import aphid traits
 source('scripts/import aphid trait measurements.R')

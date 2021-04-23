@@ -1,7 +1,6 @@
 ### Exploratory analyses of aphid trait distributions
 
 # quick focus on one trait
-
 trait = "femur_length"
 aphid_traits %>%
   filter(Trait.type==trait) %>%
@@ -30,7 +29,7 @@ a = anova(f)
 a$r2 <- a$`Sum Sq`/sum(a$`Sum Sq`)
 r2(f)
 a
-plot(DHARMa::simulateResiduals(f)) # pretty good
+plot(DHARMa::simulateResiduals(f)) # looks pretty good, significance is likely only due to the large number of data points
 
 # LMER
 library(lme4)
