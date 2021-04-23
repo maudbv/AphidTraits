@@ -3,12 +3,11 @@
 # Set options
 Sys.setlocale("LC_ALL", "de_DE.UTF-8")
 
-
 # Load libraries
 library(tidyverse)
 library(stringi)
 library(data.table)
-
+library(rio)
 
 library(lme4)
 library(lmerTest)
@@ -20,7 +19,6 @@ library(r2glmm)
 source('scripts/import aphid trait measurements.R')
 
 ## extract and format subset of datatables
-
 
 ## Import plant traits
 
