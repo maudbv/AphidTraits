@@ -1,6 +1,14 @@
-# Import aphid trait data
+# IMPORT APHID TRAIT DATA
+# Script to import, clean and format the aphid trait length measurements
+# from microscope photography
 
-# extract length measurements from image analyses ####
+#### OUTPUT: three main data tables for analyses:
+#  - aphid_df: dataframe with all trait measurements including repetitions
+#  - aphid_traits_long:  mean trait values per individuals, all in one column
+#  - aphid_traits: aphid_traits_long transformed as one column per trait
+#  - missing_measurements: table of missing imageJ results (only 16)
+
+# Import length measurements from image analyses ####
 
 ## import and assemble files
 
@@ -163,19 +171,7 @@ aphid_df$Trait.type <- str_replace_all(aphid_df$Trait.type,
 # Clean up unnecessary columns:
 aphid_df <- aphid_df[, -which(colnames(aphid_df) %in% c( "V1", "colony_judith","PlotA", "PlotB"))] 
 
-# Calculate mean across 3 replicate measures ####
-aphid_traits <- aphid_df %>% 
-  group_by(collector, date_collected, PhotoName, ID_plot,Colony,Individual, Trait.type,Trait, side, Part) %>%
-summarise(count.reps = n(),
-            Length.pix.mean = mean(Length, na.rm = TRUE))
-
-# sum parts 1 and 2
-aphid_traits <- aphid_traits %>%
-  group_by(collector, date_collected, PhotoName, ID_plot,Colony,Individual, Trait.type,Trait, side, count.reps) %>%
-  summarise(count.parts = n(),
-            Length.pix.mean = sum(Length.pix.mean, na.rm = TRUE))
-
-# import and reformat metadata on photo magnification and scale ####
+# Import and reformat metadata on photo magnification and scale ####
 
 ## import and reformat excel data
 library(rio)
@@ -263,7 +259,7 @@ magnif_df$collector<- plot_names$collector[
 
 magnif_df$colony[magnif_df$collector == "Judith"] <-""
 
-# Add unique photo index to match to aphid_traits table
+# Add unique photo index to match to aphid_traits_long table
 magnif_df$PhotoName <- apply(
   as.data.frame(magnif_df[, c("NamePlotPhoto", "colony","individual","PhotoType")]),
   MARGIN = 1, 
@@ -273,38 +269,65 @@ magnif_df$PhotoName <- gsub(pattern = "___", replacement = "_", magnif_df$PhotoN
 magnif_df$PhotoName <- gsub(pattern = "__", replacement = "_", magnif_df$PhotoName)
 magnif_df$PhotoName <- paste(magnif_df$PhotoName, ".jpg", sep = "")
 
-# merge tables by photo index ####
+# Merge tables by photo name ####
 
-aphid_traits = merge( aphid_traits,
+aphid_df = merge( aphid_df,
        magnif_df[,c("PhotoName", "Magnification")] ,
        by = "PhotoName",
        all.x = TRUE)
 
-# Import conversion table ####
+# Import pixel scale conversion table ####
 magnif_conversion <- fread("data/calibration 2020_maud edits.csv")
 
-# Convert length measurements in mm ####
+# Convert pixel measurements in mm ####
 
-aphid_traits$Length.mm <- aphid_traits$Length.pix.mean/
+aphid_df$Length.mm <- aphid_df$Length/
   magnif_conversion$mean.pixel.per.mm[match(
-    as.numeric(aphid_traits$Magnification),
+    as.numeric(aphid_df$Magnification),
     magnif_conversion$magnification)]
 
-# clean up columns
+# Calculate mean trait values across 3 replicate measures ####
+aphid_traits_long <- aphid_df %>% 
+  group_by(collector, date_collected, PhotoName, ID_plot,
+           Colony,Individual, Trait.type,Trait, side, Part) %>%
+  summarise(count.reps = n(),
+            Length.mean = mean(Length.mm, na.rm = TRUE))
 
+# sum parts 1 and 2 of traits when relevant
+aphid_traits_long <- aphid_traits_long %>%
+  group_by(collector, date_collected, PhotoName, ID_plot,
+           Colony,Individual, Trait.type,Trait, side, count.reps) %>%
+  summarise(count.parts = n(),
+            Length.mean = sum(Length.mean, na.rm = TRUE))
 
-### Check for duplicates and mistakes #######
+# make sure aphid_trait is a data.frame
+aphid_traits_long <- as.data.frame(aphid_traits_long)
+
+# Import and add rhinaria counts ####
+rhin_count_left <- fread("data/rhinaria_LA.csv", data.table = FALSE)
+rhin_count_right <- fread("data/rhinaria_RA.csv", data.table = FALSE)
+# merge with aphid_trait table by photo name
+# add both to the right hand antenna
+aphid_traits_long$Rhinaria_left <-  rhin_count_left[
+  match(aphid_traits_long$PhotoName, rhin_count_right$name),
+  "#rhinaria"]
+
+aphid_traits_long$Rhinaria_right <-  rhin_count_right[
+  match(aphid_traits_long$PhotoName, rhin_count_right$name),
+  "#rhinaria"]
+
+# Check for duplicates and mistakes #######
 
 # identify individuals with multiple trait measurements:
-x = table(aphid_traits$Individual, aphid_traits$Trait)
+x = table(aphid_traits_long$Individual, aphid_traits_long$Trait)
 
 # Which are apparently measured more than once ?
 length(duplicated_individuals <- rownames(x) [rowSums(x >1)>0])
 # NO more obvious REMAINING DUPLICATED
 
-## STILL MISSING: Photos which should have been measured (according to the checklist) but do not appear in aphid_traits:
+## STILL MISSING: Photos which should have been measured (according to the checklist) but do not appear in aphid_traits_long:
 missing_measurements <- magnif_df[which(
-  !(magnif_df$PhotoName %in% aphid_traits$PhotoName) &
+  !(magnif_df$PhotoName %in% aphid_traits_long$PhotoName) &
     !is.na(magnif_df$Magnification) &
     (magnif_df$Magnification!= "NA")),]
 
@@ -326,25 +349,57 @@ nrow(missing_measurements)
 # Two due to typos on "ocular tubercles"
 
 
-# Create a "wide" data table version of aphid traits  ####
+# Create a "wide" version of aphid_traits_long  ####
 # wide = organised with traits as columns
-
-aphid_traits_wide <- reshape(
-  aphid_traits[,c("ID_plot",
+aphid_traits <- reshape(
+  aphid_traits_long[,c("ID_plot",
                   "Colony","Individual",
                   "date_collected","collector",
-                  "Trait", "Length.mm")],
-  v.names = "Length.mm",
+                  "Trait", "Length.mean")],
+  v.names = "Length.mean",
   idvar = c("ID_plot",
             "Colony","Individual",
             "date_collected","collector"),
   timevar = "Trait",
   direction = "wide")
 
-names(aphid_traits_wide) <- sub(pattern = "Length.mm.", replacement = "",
-                   names(aphid_traits_wide))
+# correct names to simplify
+names(aphid_traits) <- sub(pattern = "Length.mean.", replacement = "",
+                                names(aphid_traits))
+
+# add the rhinaria count:
+aphid_traits <- merge(aphid_traits, 
+      aphid_traits_long[aphid_traits_long$Trait == "ant3_length_right",
+             c("Individual","Rhinaria_left","Rhinaria_right")],
+      by = "Individual",
+      all = TRUE)
+
+
+# Calculate estimated mean number of rhinaria
+aphid_traits$Rhinaria.mean <- apply(
+  aphid_traits[, c("Rhinaria_left","Rhinaria_right")],
+  1, mean, na.rm = TRUE)
+
+#calculate fluctuating left-right asymetry 
+aphid_traits$Rhinaria.asym <- rowSums(cbind(aphid_traits$Rhinaria_left,
+                                      - aphid_traits$Rhinaria_right),
+                                      na.rm = TRUE)
+aphid_traits$ant3_length_asym <- rowSums(cbind(aphid_traits$ant3_length_left,
+                                            - aphid_traits$ant3_length_right),
+                                      na.rm = TRUE)
+
+aphid_traits$tarsus_length_asym <- rowSums(cbind(aphid_traits$tarsus_length_left,
+                                               - aphid_traits$tarsus_length_right),
+                                         na.rm = TRUE)
+
+aphid_traits$femur_length_asym <- rowSums(cbind(aphid_traits$femur_length_left,
+                                                 - aphid_traits$femur_length_right),
+                                           na.rm = TRUE)
+
+aphid_traits$tibia_length_asym <- rowSums(cbind(aphid_traits$tibia_length_left,
+                                                - aphid_traits$tibia_length_right),
+                                          na.rm = TRUE)
 
 # Still some missing info to check!! ---> elena
 
 # clean up ####
-rm(tmp, 
