@@ -1,0 +1,417 @@
+Slice	Count	Total Area	Average Size	%Area
+leaf scan 1.jpeg	31	17.306	0.558	2.775
+leafscan 152.jpeg	12	15.103	1.259	2.422
+leafscan 294.jpeg	3	35.249	11.750	5.652
+leafscan 105.jpeg	64	95.198	1.487	15.265
+leafscan 113.jpeg	12	16.740	1.395	2.684
+leafscan 144.jpeg	19	15.836	0.833	2.539
+leafscan 328.jpeg	12	67.380	5.615	10.804
+leafscan 282.jpeg	8	32.617	4.077	5.230
+leafscan 20.jpeg	35	47.687	1.362	7.647
+leafscan 353.jpeg	11	59.620	5.420	9.560
+leafscan 216.jpeg	3	55.567	18.522	8.910
+leafscan 9.jpeg	18	30.606	1.700	4.908
+leafscan 168.jpeg	14	13.544	0.967	2.172
+leafscan 77.jpeg	30	47.585	1.586	7.630
+leafscan 98.jpeg	33	47.621	1.443	7.636
+leafscan 187.jpeg	15	16.669	1.111	2.673
+leafscan 304.jpeg	8	48.358	6.045	7.754
+leafscan 241.jpeg	5	71.729	14.346	11.502
+leafscan 61.jpeg	104	85.697	0.824	13.741
+leafscan 191.jpeg	19	28.679	1.509	4.599
+leafscan 312.jpeg	12	38.025	3.169	6.097
+leafscan 257.jpeg	11	59.284	5.389	9.506
+leafscan 129.jpeg	11	12.515	1.138	2.007
+leafscan 36.jpeg	22	27.690	1.259	4.440
+leafscan 345.jpeg	43	76.261	1.774	12.228
+leafscan 200.jpeg	12	17.418	1.451	2.793
+leafscan 277.jpeg	2	31.461	15.730	5.045
+leafscan 332.jpeg	22	37.815	1.719	6.064
+leafscan 298.jpeg	7	39.607	5.658	6.351
+leafscan 41.jpeg	29	35.295	1.217	5.660
+leafscan 220.jpeg	5	37.389	7.478	5.995
+leafscan 109.jpeg	95	86.872	0.914	13.930
+leafscan 16.jpeg	26	40.523	1.559	6.498
+leafscan 236.jpeg	7	33.852	4.836	5.428
+leafscan 261.jpeg	2	43.755	21.878	7.016
+leafscan 324.jpeg	14	58.765	4.197	9.423
+leafscan 148.jpeg	17	26.379	1.552	4.230
+leafscan 57.jpeg	32	49.602	1.550	7.954
+leafscan 133.jpeg	17	13.088	0.770	2.099
+leafscan 308.jpeg	3	41.854	13.951	6.711
+leafscan 164.jpeg	17	16.906	0.994	2.711
+leafscan 5.jpeg	20	41.306	2.065	6.623
+leafscan 94.jpeg	27	60.839	2.253	9.755
+leafscan 172.jpeg	11	14.895	1.354	2.388
+leafscan 82.jpeg	41	55.952	1.365	8.972
+leafscan 349.jpeg	19	43.836	2.307	7.029
+leafscan 125.jpeg	13	12.140	0.934	1.947
+leafscan 124.jpeg	10	16.371	1.637	2.625
+leafscan 348.jpeg	18	35.437	1.969	5.682
+leafscan 173.jpeg	12	13.324	1.110	2.137
+leafscan 83.jpeg	70	70.010	1.000	11.226
+leafscan 165.jpeg	10	11.605	1.161	1.861
+leafscan 4.jpeg	36	48.658	1.352	7.802
+leafscan 95.jpeg	26	47.603	1.831	7.633
+leafscan 309.jpeg	3	45.619	15.206	7.315
+leafscan 132.jpeg	11	12.040	1.095	1.931
+leafscan 149.jpeg	23	19.629	0.853	3.148
+leafscan 56.jpeg	38	53.947	1.420	8.650
+leafscan 260.jpeg	4	38.775	9.694	6.218
+leafscan 325.jpeg	13	73.861	5.682	11.843
+leafscan 237.jpeg	2	45.595	22.797	7.311
+leafscan 108.jpeg	49	77.862	1.589	12.485
+leafscan 17.jpeg	54	47.889	0.887	7.679
+leafscan 221.jpeg	3	39.513	13.171	6.336
+leafscan 40.jpeg	27	72.259	2.676	11.587
+leafscan 276.jpeg	3	37.790	12.597	6.060
+leafscan 333.jpeg	15	69.020	4.601	11.067
+leafscan 299.jpeg	3	35.721	11.907	5.728
+leafscan 344.jpeg	9	45.598	5.066	7.312
+leafscan 201.jpeg	17	21.885	1.287	3.509
+leafscan 128.jpeg	10	12.250	1.225	1.964
+leafscan 37.jpeg	60	43.040	0.717	6.901
+leafscan 313.jpeg	4	38.039	9.510	6.099
+leafscan 256.jpeg	2	31.839	15.919	5.105
+leafscan 60.jpeg	29	66.657	2.299	10.688
+leafscan 190.jpeg	16	14.461	0.904	2.319
+leafscan 305.jpeg	4	58.775	14.694	9.424
+leafscan 240.jpeg	5	39.038	7.808	6.260
+leafscan 8.jpeg	38	62.262	1.638	9.984
+leafscan 169.jpeg	15	15.254	1.017	2.446
+leafscan 76.jpeg	28	41.656	1.488	6.679
+leafscan 99.jpeg	14	24.876	1.777	3.989
+leafscan 186.jpeg	13	17.514	1.347	2.808
+leafscan 352.jpeg	14	63.384	4.527	10.163
+leafscan 217.jpeg	3	36.290	12.097	5.819
+leafscan 21.jpeg	34	63.234	1.860	10.139
+leafscan 329.jpeg	12	78.228	6.519	12.544
+leafscan 283.jpeg	3	42.887	14.296	6.877
+leafscan 145.jpeg	24	21.107	0.879	3.385
+leafscan 112.jpeg	12	16.181	1.348	2.595
+leafscan 104.jpeg	32	56.947	1.780	9.131
+leafscan 295.jpeg	14	44.612	3.187	7.153
+leafscan 153.jpeg	15	12.713	0.848	2.039
+leafscan 271.jpeg	6	38.160	6.360	6.119
+leafscan 334.jpeg	27	51.624	1.912	8.278
+leafscan 158.jpeg	13	29.204	2.246	4.683
+leafscan 47.jpeg	28	59.409	2.122	9.526
+leafscan372.jpg	35	37.837	1.081	5.899
+leafscan414.jpg	12	48.208	4.017	7.516
+leafscan400.jpg	24	57.842	2.410	9.018
+leafscan366.jpg	30	71.720	2.391	11.181
+leafscan 226.jpeg	5	44.895	8.979	7.199
+leafscan 10.jpeg	25	49.037	1.961	7.863
+leafscan399.jpg	22	65.980	2.999	10.286
+leafscan 230.jpeg	4	28.265	7.066	4.532
+leafscan 119.jpeg	9	15.595	1.733	2.501
+leafscan 267.jpeg	4	36.385	9.096	5.834
+leafscan 288.jpeg	12	52.760	4.397	8.460
+leafscan 322.jpeg	24	58.157	2.423	9.325
+leafscan 51.jpeg	25	43.138	1.726	6.917
+leafscan 359.jpeg	13	66.509	5.116	10.665
+leafscan 135.jpeg	14	8.479	0.606	1.360
+leafscan 3.jpeg	25	40.258	1.610	6.455
+leafscan 162.jpeg	13	10.429	0.802	1.672
+leafscan 92.jpeg	38	54.440	1.433	8.729
+leafscan398.jpg	15	55.133	3.676	8.595
+leafscan 318.jpeg	6	50.544	8.424	8.105
+leafscan 174.jpeg	16	15.388	0.962	2.467
+leafscan401.jpg	29	36.637	1.263	5.712
+leafscan367.jpg	21	54.258	2.584	8.459
+leafscan373.jpg	11	57.396	5.218	8.948
+leafscan 84.jpeg	41	65.139	1.589	10.445
+leafscan 123.jpeg	18	18.211	1.012	2.920
+leafscan 154.jpeg	12	17.857	1.488	2.863
+leafscan 292.jpeg	21	69.074	3.289	11.076
+leafscan 338.jpeg	24	88.853	3.702	14.247
+leafscan365.jpg	17	55.549	3.268	8.660
+leafscan403.jpg	24	76.297	3.179	11.895
+leafscan371.jpg	26	91.372	3.514	14.245
+leafscan 103.jpeg	79	73.902	0.935	11.850
+leafscan 115.jpeg	16	19.118	1.195	3.066
+leafscan 142.jpeg	17	15.633	0.920	2.507
+leafscan 284.jpeg	6	59.124	9.854	9.480
+leafscan 139.jpeg	14	13.475	0.963	2.161
+leafscan 26.jpeg	22	45.185	2.054	7.245
+leafscan 355.jpeg	20	65.585	3.279	10.516
+leafscan 210.jpeg	6	39.782	6.630	6.379
+leafscan 71.jpeg	20	32.208	1.610	5.165
+leafscan 181.jpeg	11	15.267	1.388	2.448
+leafscan 302.jpeg	13	57.709	4.439	9.253
+leafscan 247.jpeg	8	51.991	6.499	8.337
+leafscan 178.jpeg	16	16.649	1.041	2.670
+leafscan 67.jpeg	27	36.234	1.342	5.810
+leafscan 88.jpeg	30	60.855	2.029	9.758
+leafscan 197.jpeg	11	13.776	1.252	2.209
+leafscan 314.jpeg	6	88.743	14.791	14.230
+leafscan 251.jpeg	11	51.390	4.672	8.240
+leafscan370.jpg	19	46.021	2.422	7.175
+leafscan364.jpg	25	63.338	2.534	9.874
+leafscan402.jpg	19	50.735	2.670	7.910
+leafscan 30.jpeg	21	50.003	2.381	8.018
+leafscan 343.jpeg	8	59.652	7.457	9.565
+leafscan 206.jpeg	21	20.273	0.965	3.251
+leafscan 342.jpeg	3	22.859	7.620	3.665
+leafscan 207.jpeg	3	37.796	12.599	6.061
+leafscan 31.jpeg	21	40.059	1.908	6.423
+leafscan 315.jpeg	4	37.635	9.409	6.035
+leafscan 250.jpeg	16	67.574	4.223	10.835
+leafscan406.jpg	28	52.852	1.888	8.240
+leafscan374.jpg	8	49.262	6.158	7.680
+leafscan412.jpg	24	46.138	1.922	7.193
+leafscan 179.jpeg	20	18.547	0.927	2.974
+leafscan 66.jpeg	21	27.920	1.330	4.477
+leafscan 89.jpeg	28	43.412	1.550	6.961
+leafscan 196.jpeg	15	21.029	1.402	3.372
+leafscan 303.jpeg	13	55.244	4.250	8.858
+leafscan 246.jpeg	15	40.946	2.730	6.566
+leafscan 70.jpeg	45	31.556	0.701	5.060
+leafscan 180.jpeg	19	17.995	0.947	2.886
+leafscan 354.jpeg	18	70.837	3.935	11.359
+leafscan 211.jpeg	4	34.948	8.737	5.604
+leafscan 138.jpeg	23	13.712	0.596	2.199
+leafscan 27.jpeg	31	72.024	2.323	11.549
+leafscan 285.jpeg	3	46.366	15.455	7.435
+leafscan 143.jpeg	24	22.862	0.953	3.666
+leafscan 114.jpeg	12	10.184	0.849	1.633
+leafscan375.jpg	22	66.685	3.031	10.396
+leafscan413.jpg	17	64.731	3.808	10.092
+leafscan407.jpg	22	56.355	2.562	8.786
+leafscan 102.jpeg	105	101.506	0.967	16.276
+leafscan 293.jpeg	14	42.987	3.070	6.893
+leafscan 339.jpeg	21	47.664	2.270	7.643
+leafscan 155.jpeg	15	18.656	1.244	2.991
+leafscan 122.jpeg	15	25.231	1.682	4.046
+leafscan 175.jpeg	4	23.282	5.821	3.733
+leafscan411.jpg	22	52.471	2.385	8.180
+leafscan377.jpg	15	54.888	3.659	8.557
+leafscan363.jpg	22	75.898	3.450	11.833
+leafscan 85.jpeg	36	59.362	1.649	9.519
+leafscan405.jpg	19	35.031	1.844	5.461
+leafscan388.jpg	13	64.209	4.939	10.010
+leafscan 319.jpeg	18	46.182	2.566	7.405
+leafscan 2.jpeg	17	43.445	2.556	6.966
+leafscan 163.jpeg	15	8.173	0.545	1.311
+leafscan 93.jpeg	31	64.211	2.071	10.296
+leafscan 134.jpeg	14	13.250	0.946	2.125
+leafscan 358.jpeg	25	68.412	2.736	10.970
+leafscan 50.jpeg	13	36.183	2.783	5.802
+leafscan 266.jpeg	3	51.288	17.096	8.224
+leafscan 289.jpeg	4	36.746	9.187	5.892
+leafscan 323.jpeg	21	82.371	3.922	13.208
+leafscan 118.jpeg	11	12.747	1.159	2.044
+leafscan 231.jpeg	11	56.981	5.180	9.137
+leafscan 11.jpeg	30	59.017	1.967	9.463
+leafscan389.jpg	29	59.263	2.044	9.239
+leafscan362.jpg	41	56.309	1.373	8.779
+leafscan404.jpg	25	71.514	2.861	11.149
+leafscan410.jpg	19	45.916	2.417	7.158
+leafscan 227.jpeg	10	56.662	5.666	9.086
+leafscan376.jpg	28	89.430	3.194	13.942
+leafscan 159.jpeg	13	14.748	1.134	2.365
+leafscan 46.jpeg	33	35.546	1.077	5.700
+leafscan 270.jpeg	7	31.525	4.504	5.055
+leafscan 335.jpeg	10	58.945	5.894	9.452
+leafscan 121.jpeg	19	20.304	1.069	3.256
+leafscan 208.jpeg	4	38.370	9.593	6.153
+leafscan 86.jpeg	36	35.912	0.998	5.758
+leafscan 199.jpeg	11	23.064	2.097	3.698
+leafscan 176.jpeg	15	14.703	0.980	2.358
+leafscan409.jpg	20	75.785	3.789	11.815
+leafscan 69.jpeg	31	43.930	1.417	7.044
+leafscan390.jpg	36	60.364	1.677	9.411
+leafscan384.jpg	14	41.681	2.977	6.498
+leafscan 90.jpeg	35	51.417	1.469	8.245
+leafscan 1.jpeg	18	34.496	1.916	5.531
+leafscan 160.jpeg	20	18.801	0.940	3.015
+leafscan 249.jpeg	6	35.642	5.940	5.715
+leafscan 137.jpeg	16	16.791	1.049	2.692
+leafscan 28.jpeg	26	58.972	2.268	9.456
+leafscan 53.jpeg	73	113.268	1.552	18.162
+leafscan 320.jpeg	9	81.097	9.011	13.004
+leafscan 265.jpeg	3	41.680	13.893	6.683
+leafscan 232.jpeg	2	34.724	17.362	5.568
+leafscan 12.jpeg	30	37.526	1.251	6.017
+leafscan385.jpg	11	68.116	6.192	10.619
+leafscan391.jpg	23	69.849	3.037	10.890
+leafscan 361.jpeg	21	82.796	3.943	13.276
+leafscan408.jpg	1	2.655	2.655	0.414
+leafscan 224.jpeg	7	48.237	6.891	7.735
+leafscan 45.jpeg	18	57.482	3.193	9.217
+leafscan 336.jpeg	14	87.083	6.220	13.964
+leafscan 273.jpeg	3	50.881	16.960	8.159
+leafscan 204.jpeg	16	20.223	1.264	3.243
+leafscan 341.jpeg	14	51.265	3.662	8.220
+leafscan 32.jpeg	31	44.157	1.424	7.081
+leafscan 253.jpeg	9	36.421	4.047	5.840
+leafscan 316.jpeg	2	38.551	19.276	6.182
+leafscan378.jpg	14	43.076	3.077	6.716
+leafscan387.jpg	31	64.256	2.073	10.018
+leafscan 195.jpeg	13	19.101	1.469	3.063
+leafscan393.jpg	21	62.561	2.979	9.753
+leafscan 65.jpeg	24	47.949	1.998	7.688
+leafscan 245.jpeg	5	47.387	9.477	7.598
+leafscan 300.jpeg	8	42.958	5.370	6.888
+leafscan 183.jpeg	15	16.194	1.080	2.597
+leafscan 73.jpeg	33	37.573	1.139	6.025
+leafscan 212.jpeg	2	49.823	24.911	7.989
+leafscan 357.jpeg	26	73.186	2.815	11.735
+leafscan 24.jpeg	27	68.264	2.528	10.946
+leafscan 286.jpeg	10	42.772	4.277	6.858
+leafscan 269.jpeg	13	45.092	3.469	7.230
+leafscan 140.jpeg	14	12.431	0.888	1.993
+leafscan 117.jpeg	13	10.639	0.818	1.706
+leafscan392.jpg	30	87.424	2.914	13.630
+leafscan386.jpg	19	60.649	3.192	9.455
+leafscan 228.jpeg	3	33.791	11.264	5.418
+leafscan379.jpg	28	55.943	1.998	8.722
+leafscan 101.jpeg	31	49.135	1.585	7.879
+leafscan 290.jpeg	6	54.100	9.017	8.675
+leafscan 156.jpeg	22	33.605	1.527	5.388
+leafscan 49.jpeg	33	129.535	3.925	20.771
+leafscan 157.jpeg	13	13.703	1.054	2.197
+leafscan 48.jpeg	49	58.028	1.184	9.305
+leafscan 291.jpeg	18	58.758	3.264	9.422
+leafscan369.jpg	20	95.838	4.792	14.941
+leafscan 100.jpeg	23	43.737	1.902	7.013
+leafscan382.jpg	12	61.384	5.115	9.570
+leafscan 229.jpeg	3	43.383	14.461	6.956
+leafscan396.jpg	28	65.897	2.353	10.273
+leafscan 116.jpeg	15	11.667	0.778	1.871
+leafscan 141.jpeg	21	19.908	0.948	3.192
+leafscan 287.jpeg	39	65.057	1.668	10.432
+leafscan.jpeg	40	415.832	10.396	66.678
+leafscan 268.jpeg	18	66.018	3.668	10.586
+leafscan 25.jpeg	25	48.374	1.935	7.757
+leafscan 213.jpeg	3	58.284	19.428	9.346
+leafscan 356.jpeg	16	82.259	5.141	13.190
+leafscan 182.jpeg	6	11.896	1.983	1.907
+leafscan 72.jpeg	47	47.833	1.018	7.670
+leafscan 244.jpeg	11	38.763	3.524	6.216
+leafscan 301.jpeg	8	38.360	4.795	6.151
+leafscan397.jpg	22	26.557	1.207	4.140
+leafscan 194.jpeg	11	12.813	1.165	2.055
+leafscan383.jpg	13	49.323	3.794	7.689
+leafscan 64.jpeg	46	68.914	1.498	11.050
+leafscan 252.jpeg	15	54.321	3.621	8.710
+leafscan 317.jpeg	4	61.217	15.304	9.816
+leafscan368.jpg	1	4.613	4.613	0.719
+leafscan 33.jpeg	28	93.560	3.341	15.002
+leafscan 205.jpeg	4	14.084	3.521	2.258
+leafscan 340.jpeg	14	19.071	1.362	3.058
+leafscan 337.jpeg	10	91.128	9.113	14.612
+leafscan 272.jpeg	5	41.175	8.235	6.602
+leafscan 44.jpeg	28	50.698	1.811	8.129
+leafscan 360.jpeg	14	73.103	5.222	11.722
+leafscan 225.jpeg	6	29.558	4.926	4.740
+leafscan 13.jpeg	20	46.883	2.344	7.518
+leafscan395.jpg	16	47.984	2.999	7.481
+leafscan381.jpg	11	77.341	7.031	12.058
+leafscan 233.jpeg	3	44.887	14.962	7.198
+leafscan 321.jpeg	16	71.683	4.480	11.494
+leafscan 264.jpeg	16	38.590	2.412	6.188
+leafscan 52.jpeg	49	63.345	1.293	10.157
+leafscan 136.jpeg	16	12.690	0.793	2.035
+leafscan 29.jpeg	35	69.898	1.997	11.208
+leafscan 248.jpeg	11	49.939	4.540	8.008
+leafscan 91.jpeg	31	82.720	2.668	13.264
+leafscan 161.jpeg	16	18.532	1.158	2.972
+leafscan380.jpg	12	61.366	5.114	9.567
+leafscan394.jpg	8	35.925	4.491	5.601
+leafscan 87.jpeg	45	62.980	1.400	10.099
+leafscan 198.jpeg	6	16.829	2.805	2.698
+leafscan 177.jpeg	9	17.930	1.992	2.875
+leafscan 68.jpeg	69	46.583	0.675	7.470
+leafscan 209.jpeg	2	33.241	16.620	5.330
+leafscan 120.jpeg	9	13.021	1.447	2.088
+leafscan 202.jpeg	12	16.597	1.383	2.661
+leafscan 347.jpeg	17	72.083	4.240	11.558
+leafscan 34.jpeg	23	31.864	1.385	5.109
+leafscan 255.jpeg	5	40.642	8.128	6.517
+leafscan 310.jpeg	9	43.785	4.865	7.021
+leafscan 193.jpeg	8	11.930	1.491	1.913
+leafscan 63.jpeg	108	63.003	0.583	10.102
+leafscan 243.jpeg	3	31.083	10.361	4.984
+leafscan 306.jpeg	13	53.125	4.087	8.519
+leafscan 185.jpeg	15	15.521	1.035	2.489
+leafscan 75.jpeg	27	32.670	1.210	5.239
+leafscan 214.jpeg	2	42.595	21.297	6.830
+leafscan 351.jpeg	13	81.022	6.232	12.992
+leafscan 22.jpeg	25	47.633	1.905	7.638
+leafscan 280.jpeg	4	48.765	12.191	7.819
+leafscan 146.jpeg	16	18.740	1.171	3.005
+leafscan 59.jpeg	20	53.485	2.674	8.576
+leafscan 238.jpeg	13	36.024	2.771	5.776
+leafscan 111.jpeg	6	12.253	2.042	1.965
+leafscan 107.jpeg	34	43.938	1.292	7.045
+leafscan 18.jpeg	26	40.634	1.563	6.516
+leafscan 296.jpeg	4	25.653	6.413	4.113
+leafscan 279.jpeg	11	35.829	3.257	5.745
+leafscan 150.jpeg	20	19.313	0.966	3.097
+leafscan 127.jpeg	13	20.984	1.614	3.365
+leafscan 38.jpeg	28	38.107	1.361	6.110
+leafscan 80.jpeg	30	52.135	1.738	8.360
+leafscan 170.jpeg	17	11.187	0.658	1.794
+leafscan 259.jpeg	2	28.199	14.100	4.522
+leafscan 96.jpeg	29	48.767	1.682	7.820
+leafscan 189.jpeg	11	15.124	1.375	2.425
+leafscan 166.jpeg	11	12.159	1.105	1.950
+leafscan 7.jpeg	20	38.140	1.907	6.116
+leafscan 79.jpeg	21	26.175	1.246	4.197
+leafscan 131.jpeg	12	13.494	1.124	2.164
+leafscan 218.jpeg	11	42.959	3.905	6.888
+leafscan 55.jpeg	33	82.020	2.485	13.152
+leafscan 326.jpeg	9	57.752	6.417	9.260
+leafscan 263.jpeg	7	41.211	5.887	6.608
+leafscan 234.jpeg	12	45.397	3.783	7.279
+leafscan 14.jpeg	45	64.440	1.432	10.333
+leafscan 222.jpeg	10	44.102	4.410	7.072
+leafscan 43.jpeg	34	50.560	1.487	8.107
+leafscan 330.jpeg	12	43.201	3.600	6.927
+leafscan 275.jpeg	23	65.316	2.840	10.473
+leafscan 331.jpeg	14	49.624	3.545	7.957
+leafscan 274.jpeg	15	44.596	2.973	7.151
+leafscan 42.jpeg	15	55.377	3.692	8.880
+leafscan 223.jpeg	6	40.320	6.720	6.465
+leafscan 15.jpeg	31	36.564	1.179	5.863
+leafscan 235.jpeg	17	59.724	3.513	9.577
+leafscan 327.jpeg	10	55.435	5.543	8.889
+leafscan 262.jpeg	22	57.873	2.631	9.280
+leafscan 54.jpeg	35	44.857	1.282	7.193
+leafscan 219.jpeg	5	44.303	8.861	7.104
+leafscan 130.jpeg	13	12.247	0.942	1.964
+leafscan 97.jpeg	30	41.514	1.384	6.657
+leafscan 188.jpeg	12	13.922	1.160	2.232
+leafscan 167.jpeg	5	13.698	2.740	2.196
+leafscan 6.jpeg	33	52.336	1.586	8.392
+leafscan 78.jpeg	68	50.964	0.749	8.172
+leafscan 258.jpeg	2	48.966	24.483	7.852
+leafscan 81.jpeg	49	51.269	1.046	8.221
+leafscan 171.jpeg	13	11.539	0.888	1.850
+leafscan 126.jpeg	12	5.487	0.457	0.880
+leafscan 39.jpeg	59	41.925	0.711	6.723
+leafscan 151.jpeg	18	17.372	0.965	2.786
+leafscan 297.jpeg	2	42.243	21.121	6.774
+leafscan 278.jpeg	4	33.043	8.261	5.298
+leafscan 106.jpeg	60	59.432	0.991	9.530
+leafscan 19.jpeg	30	37.616	1.254	6.032
+leafscan 110.jpeg	13	16.744	1.288	2.685
+leafscan 239.jpeg	5	44.292	8.858	7.102
+leafscan 147.jpeg	20	18.018	0.901	2.889
+leafscan 58.jpeg	30	54.110	1.804	8.676
+leafscan 281.jpeg	7	43.993	6.285	7.054
+leafscan 23.jpeg	37	30.090	0.813	4.825
+leafscan 215.jpeg	2	34.461	17.230	5.526
+leafscan 350.jpeg	24	92.481	3.853	14.829
+leafscan 184.jpeg	12	14.997	1.250	2.405
+leafscan 74.jpeg	27	35.984	1.333	5.770
+leafscan 242.jpeg	8	53.947	6.743	8.650
+leafscan 307.jpeg	4	40.965	10.241	6.569
+leafscan 192.jpeg	17	22.376	1.316	3.588
+leafscan 62.jpeg	53	75.541	1.425	12.113
+leafscan 254.jpeg	11	36.766	3.342	5.895
+leafscan 311.jpeg	6	54.030	9.005	8.664
+leafscan 35.jpeg	24	33.771	1.407	5.415
+leafscan 203.jpeg	18	17.314	0.962	2.776
+leafscan 346.jpeg	25	49.073	1.963	7.869
