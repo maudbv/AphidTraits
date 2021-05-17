@@ -6,7 +6,7 @@ This repo is a work in progress.
 
 ## Authors:
 Maud Bernard-Verdier
-Elena Gierzucht
+Elena Giertzuch
 Sascha Buchholz
 Jonathan Jeschke
 
