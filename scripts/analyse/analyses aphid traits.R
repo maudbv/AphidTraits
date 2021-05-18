@@ -5,7 +5,7 @@
 #Example for one trait : femur length left
 
 # LINEAR MODEL:
-f <- lm(sqrt(femur_length_left) ~ 
+f <- lm(femur_length ~ 
           collector +    # us or Judith
           ID_plot +      # plot effect
           Colony%in%ID_plot,  # colony within plot
@@ -22,6 +22,7 @@ print(a)
 # and 7% by year of collection(ie the "collector" effect")
 
 plot(DHARMa::simulateResiduals(f)) # looks pretty good, significance is likely only due to the large number of data points
+
 
 
 

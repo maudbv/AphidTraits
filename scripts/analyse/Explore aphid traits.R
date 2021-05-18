@@ -1,6 +1,6 @@
 ### Exploratory analyses of aphid trait distributions
 
-# quick focus on one trait
+# Example: quick focus on one trait
 trait = "femur_length"
 
 # Visualize the distribution per plot + per collector:
@@ -9,50 +9,35 @@ aphid_traits_long %>%
   ggplot( aes(x = Length.mean, y = ID_plot,
               fill = as.factor(collector))) +
   geom_boxplot() 
+# we see a clear outlier!
 
-# Select subset of data:
-Y<- filter(aphid_traits_long, Trait.type==trait) %>%
-  group_by(collector,ID_plot,Colony, Individual) %>%
-  summarise(count = n())
+# Look at all the measured traits together:
+aphid_traits_long %>%
+  ggplot( aes(x = Length.mean, y = ID_plot,
+              fill = as.factor(collector) )) +
+  geom_boxplot() + 
+  facet_wrap(~ Trait.type, scale="free")
 
-# RUN ANALYSES lme
-f <- lm(Length.mean ~ collector + ID_plot + Colony ,
-        data = Y) 
-summary(f)
-a = anova(f)
-a$r2 <- a$`Sum Sq`/sum(a$`Sum Sq`)
-r2(f)
-a
-plot(DHARMa::simulateResiduals(f)) # looks pretty good, significance is likely only due to the large number of data points
+# => will need to remove outliers for each trait
 
-# LMER
-library(lme4)
-library(lmerTest)
+# Additional graph for Rhinaria counts
+aphid_traits %>%
+  ggplot( aes(x = Rhinaria.mean, y = ID_plot,
+              fill = as.factor(collector) )) +
+  geom_boxplot()
 
-f <- lmer(Length.mean ~ collector + (1|ID_plot/Colony) ,
-          data = Y) 
-summary(f)
-anova(f)
-r = r2(f)
-v = as.data.frame(VarCorr(f))
-v$r2 <- (v$sdcor/sum(v$sdcor))*(1 - r$R2_marginal)
-v # pretty consistent with fixed effect model R2
-plot(DHARMa::simulateResiduals(f)) # pretty good (many points = easily signif)
-
+#=> will need to remove the "zeros"
 
 ## Plant traits ###
-tmp <- merge(x = plant_traits, y = plot_data, 
-             by.x = "Plot", by.y = "ID_plot", all.x = TRUE)
+# Additional graph for Rhinaria counts
+plant_traits %>%
+  ggplot( aes(x = SLA.mean, y = Plot)) +
+  geom_boxplot()
 
-# No apparent trends with sealing
-plot(SLA.mean ~ Seal_500, tmp)
-plot(SLA.mean ~ prop.neo, tmp)
-plot(SLA.mean ~ SVF, tmp)
-plot(SLA.mean ~ N, tmp)
+plant_traits %>%
+  ggplot( aes(x = LDMC.mean, y = Plot)) +
+  geom_boxplot()
 
-
-plot(LDMC.mean ~ SDMC.mean, tmp)
-plot(SDMC.mean ~ Seal_500, tmp)
-plot(stem.density.mean ~ Seal_500, tmp)
-
-                       
+plant_traits %>%
+  ggplot( aes(x = SDMC.mean, y = Plot)) +
+  geom_boxplot()

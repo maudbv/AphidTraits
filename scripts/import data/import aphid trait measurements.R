@@ -380,27 +380,58 @@ aphid_traits$Rhinaria.mean <- apply(
   aphid_traits[, c("Rhinaria_left","Rhinaria_right")],
   1, mean, na.rm = TRUE)
 
+# Calculate mean trait per individual for left and right values:
+aphid_traits$ant3_length <- rowMeans(
+  cbind(aphid_traits$ant3_length_left,
+        aphid_traits$ant3_length_right),
+  na.rm = TRUE)
+
+aphid_traits$tarsus_length <- rowMeans(
+  cbind(aphid_traits$tarsus_length_left,
+        aphid_traits$tarsus_length_right),
+  na.rm = TRUE)
+
+aphid_traits$femur_length <- rowMeans(
+  cbind(aphid_traits$femur_length_left,
+        aphid_traits$femur_length_right),
+  na.rm = TRUE)
+
+aphid_traits$tibia_length <- rowMeans(
+  cbind(aphid_traits$tibia_length_left,
+        aphid_traits$tibia_length_right),
+  na.rm = TRUE)
+
+
 #calculate fluctuating left-right asymetry 
-aphid_traits$Rhinaria.asym <- rowSums(cbind(aphid_traits$Rhinaria_left,
-                                      - aphid_traits$Rhinaria_right),
-                                      na.rm = TRUE)
-aphid_traits$ant3_length_asym <- rowSums(cbind(aphid_traits$ant3_length_left,
-                                            - aphid_traits$ant3_length_right),
-                                      na.rm = TRUE)
+aphid_traits$Rhinaria.asym <- rowSums(
+  cbind(aphid_traits$Rhinaria_left,
+        - aphid_traits$Rhinaria_right),
+  na.rm = TRUE)
 
-aphid_traits$tarsus_length_asym <- rowSums(cbind(aphid_traits$tarsus_length_left,
-                                               - aphid_traits$tarsus_length_right),
-                                         na.rm = TRUE)
+aphid_traits$ant3_length_asym <- rowSums(
+  cbind(aphid_traits$ant3_length_left,
+        - aphid_traits$ant3_length_right),
+  na.rm = TRUE)
 
-aphid_traits$femur_length_asym <- rowSums(cbind(aphid_traits$femur_length_left,
-                                                 - aphid_traits$femur_length_right),
-                                           na.rm = TRUE)
+aphid_traits$tarsus_length_asym <- rowSums(
+  cbind(aphid_traits$tarsus_length_left,
+        - aphid_traits$tarsus_length_right),
+  na.rm = TRUE)
 
-aphid_traits$tibia_length_asym <- rowSums(cbind(aphid_traits$tibia_length_left,
-                                                - aphid_traits$tibia_length_right),
-                                          na.rm = TRUE)
+aphid_traits$femur_length_asym <- rowSums(
+  cbind(aphid_traits$femur_length_left,
+        - aphid_traits$femur_length_right),
+  na.rm = TRUE)
 
-# Still some missing info to check!! ---> elena
+aphid_traits$tibia_length_asym <- rowSums(
+  cbind(aphid_traits$tibia_length_left,
+        - aphid_traits$tibia_length_right),
+  na.rm = TRUE)
+
+# Still some missing info to check!! ---> elena ?
+
+
+
 
 # clean up ####
 rm(i,x,ind, ind1, ind2, tmp,x)

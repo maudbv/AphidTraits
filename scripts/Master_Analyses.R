@@ -9,12 +9,12 @@
 
 # 3. for Plant traits:
 ## 3.1 Linear models to partition variance among colonies/plots:
-## 3.2 Linear models testing for a relationship between aphid traits and % Sealing
+## 3.2 Linear models testing for a relationship between plant traits and % Sealing
 
 
 # 4. for Aphid colony parameters (aphid nb, ants)
 ## 4.1 Linear models to partition variance among colonies/plots:
-## 4.2 Linear models testing for a relationship between aphid traits and % Sealing
+## 4.2 Linear models testing for a relationship between colony parameters and % Sealing
 
 # 5. Relationship/covariations between aphid and plant traits
 
