@@ -2,13 +2,13 @@
 
 # quick focus on one trait
 trait = "femur_length"
-aphid_traits %>%
+aphid_traits_long %>%
   filter(Trait.type==trait) %>%
-  ggplot( aes(x = Length.mm, y = ID_plot,
+  ggplot( aes(x = Length.mean, y = ID_plot,
               fill = as.factor(collector))) +
   geom_boxplot() 
 
-Y<- filter(aphid_traits, Trait.type==trait)
+Y<- filter(aphid_traits_long, Trait.type==trait)
 Y %>%
   group_by(collector,ID_plot,Colony, Individual) %>%
   summarise(count = n())
@@ -19,10 +19,10 @@ out <- DescTools::Outlier(
   na.rm = TRUE,
   value = FALSE
 )
-Y$Length.mm[out] <- NA
+Y$Length.mean[out] <- NA
 
 # lme
-f <- lm(Length.mm ~ collector + ID_plot + Colony ,
+f <- lm(Length.mean ~ collector + ID_plot + Colony ,
         data = Y) 
 summary(f)
 a = anova(f)
@@ -35,7 +35,7 @@ plot(DHARMa::simulateResiduals(f)) # looks pretty good, significance is likely o
 library(lme4)
 library(lmerTest)
 
-f <- lmer(Length.mm ~ collector + (1|ID_plot/Colony) ,
+f <- lmer(Length.mean ~ collector + (1|ID_plot/Colony) ,
           data = Y) 
 summary(f)
 anova(f)
@@ -45,3 +45,20 @@ v$r2 <- (v$sdcor/sum(v$sdcor))*(1 - r$R2_marginal)
 v # pretty consistent with fixed effect model R2
 plot(DHARMa::simulateResiduals(f)) # pretty good (many points = easily signif)
 
+
+## Plant traits ###
+tmp <- merge(x = plant_traits, y = plot_data, 
+             by.x = "Plot", by.y = "ID_plot", all.x = TRUE)
+
+# No apparent trends with sealing
+plot(SLA.mean ~ Seal_500, tmp)
+plot(SLA.mean ~ prop.neo, tmp)
+plot(SLA.mean ~ SVF, tmp)
+plot(SLA.mean ~ N, tmp)
+
+
+plot(LDMC.mean ~ SDMC.mean, tmp)
+plot(SDMC.mean ~ Seal_500, tmp)
+plot(stem.density.mean ~ Seal_500, tmp)
+
+                       

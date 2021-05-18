@@ -43,16 +43,16 @@ for (i in unique(plot_names$`name of image`)){
   # Only for judith plot names
   if( plot_names[plot_names$`name of image` == i,
                  "collector"] =="Judith"){
-  # Account for some of the Judith plot with ambiguous names
-  # e.g. U2_ vs. U2_2
-  ind1 <- grep(pattern = paste(i,"1", sep = ""),
-               x = aphid_df$PhotoName)
-  if (length(ind1) >0) ind <- ind[which(!ind %in% ind1)]
-  
-  ind2 <- grep(pattern = paste(i,"2", sep = ""),
-               x = aphid_df$PhotoName)
+    # Account for some of the Judith plot with ambiguous names
+    # e.g. U2_ vs. U2_2
+    ind1 <- grep(pattern = paste(i,"1", sep = ""),
+                 x = aphid_df$PhotoName)
+    if (length(ind1) >0) ind <- ind[which(!ind %in% ind1)]
+    
+    ind2 <- grep(pattern = paste(i,"2", sep = ""),
+                 x = aphid_df$PhotoName)
     if (length(ind2) >0) ind <- ind[which(!ind %in% ind2)]
-
+    
   }
   
   # extract info for the plot:
@@ -403,3 +403,4 @@ aphid_traits$tibia_length_asym <- rowSums(cbind(aphid_traits$tibia_length_left,
 # Still some missing info to check!! ---> elena
 
 # clean up ####
+rm(i,x,ind, ind1, ind2, tmp,x)
