@@ -2,26 +2,20 @@
 
 # quick focus on one trait
 trait = "femur_length"
+
+# Visualize the distribution per plot + per collector:
 aphid_traits_long %>%
   filter(Trait.type==trait) %>%
   ggplot( aes(x = Length.mean, y = ID_plot,
               fill = as.factor(collector))) +
   geom_boxplot() 
 
-Y<- filter(aphid_traits_long, Trait.type==trait)
-Y %>%
+# Select subset of data:
+Y<- filter(aphid_traits_long, Trait.type==trait) %>%
   group_by(collector,ID_plot,Colony, Individual) %>%
   summarise(count = n())
 
-
-out <- DescTools::Outlier(
-  Y$Length.mm,
-  na.rm = TRUE,
-  value = FALSE
-)
-Y$Length.mean[out] <- NA
-
-# lme
+# RUN ANALYSES lme
 f <- lm(Length.mean ~ collector + ID_plot + Colony ,
         data = Y) 
 summary(f)
