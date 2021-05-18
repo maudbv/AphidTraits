@@ -1,6 +1,6 @@
 ### Exploratory analyses of aphid trait distributions
 
-# Example: quick focus on one trait
+# Example: quick focus on one trait ####
 trait = "femur_length"
 
 # Visualize the distribution per plot + per collector:
@@ -11,7 +11,9 @@ aphid_traits_long %>%
   geom_boxplot() 
 # we see a clear outlier!
 
-# Look at all the measured traits together:
+# Look at all the measured traits together: ####
+
+quartz()
 aphid_traits_long %>%
   ggplot( aes(x = Length.mean, y = ID_plot,
               fill = as.factor(collector) )) +
@@ -21,6 +23,7 @@ aphid_traits_long %>%
 # => will need to remove outliers for each trait
 
 # Additional graph for Rhinaria counts
+quartz()
 aphid_traits %>%
   ggplot( aes(x = Rhinaria.mean, y = ID_plot,
               fill = as.factor(collector) )) +
