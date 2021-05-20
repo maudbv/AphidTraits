@@ -403,3 +403,4 @@ aphid_traits$tibia_length_asym <- rowSums(cbind(aphid_traits$tibia_length_left,
 # Still some missing info to check!! ---> elena
 
 # clean up ####
+
