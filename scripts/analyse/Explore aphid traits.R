@@ -1,5 +1,43 @@
 ### Exploratory analyses of aphid trait distributions
 
+# Explore all trait correlations 
+library(FactoMineR)
+
+tmp <-   data.frame(
+  aphid_traits,
+  Seal_500 = plot_data[aphid_traits$ID_plot, "Seal_500"],
+  urban_rural = plot_data[aphid_traits$ID_plot, "urban_rural"]
+)
+
+tmp <- tmp[order(tmp$Seal_500),]
+tmp[is.na(tmp$urban_rural), "urban_rural"] <- "urban"
+
+tmp <- tmp[ ,c("ID_plot", "urban_rural",
+        "abdomen_length","body_length","body_width",
+        "head_width","rostrum_length","head_length",
+        "thorax_width",
+        "tarsus_length","femur_length","tibia_length",
+        "Rhinaria.mean")]
+
+pca_aphid_traits <- PCA(
+  tmp,
+  quali.sup = 1:2,  # this is to have "plot" and "urban_rural" as a category
+  graph = FALSE
+)
+
+# represent the ordination of variables in 2 first dimensions:
+plot(pca_aphid_traits, choix = "var")
+
+aa <- cbind.data.frame(urban_rural = tmp[,2],pca_aphid_traits$ind$coord)
+bb <- coord.ellipse(aa)
+plot(pca_aphid_traits, choix = "ind",
+    habillage = 1,ellipse = TRUE,
+    ylim = c(-5,5), graph.type = "classic" )
+
+plotellipses(pca_aphid_traits,level = .95,
+             keepvar = 2,ylim = c(-5,5), 
+             label = "none")
+
 # Example: quick focus on one trait ####
 trait = "femur_length"
 
@@ -30,17 +68,3 @@ aphid_traits %>%
   geom_boxplot()
 
 #=> will need to remove the "zeros"
-
-## Plant traits ###
-# Additional graph for Rhinaria counts
-plant_traits %>%
-  ggplot( aes(x = SLA.mean, y = Plot)) +
-  geom_boxplot()
-
-plant_traits %>%
-  ggplot( aes(x = LDMC.mean, y = Plot)) +
-  geom_boxplot()
-
-plant_traits %>%
-  ggplot( aes(x = SDMC.mean, y = Plot)) +
-  geom_boxplot()
