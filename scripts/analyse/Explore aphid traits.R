@@ -1,9 +1,10 @@
 ### Exploratory analyses of aphid trait distributions
 
-# Explore all trait correlations 
+# Explore all trait correlations ####
 library(FactoMineR)
 
-tmp <-   data.frame(
+# Create a data frame with aphid traits and plot data 
+tmp <- data.frame(
   aphid_traits,
   Seal_500 = plot_data[aphid_traits$ID_plot, "Seal_500"],
   urban_rural = plot_data[aphid_traits$ID_plot, "urban_rural"]
@@ -28,10 +29,8 @@ pca_aphid_traits <- PCA(
 # represent the ordination of variables in 2 first dimensions:
 plot(pca_aphid_traits, choix = "var")
 
-aa <- cbind.data.frame(urban_rural = tmp[,2],pca_aphid_traits$ind$coord)
-bb <- coord.ellipse(aa)
 plot(pca_aphid_traits, choix = "ind",
-    habillage = 1,ellipse = TRUE,
+    habillage = 1,
     ylim = c(-5,5), graph.type = "classic" )
 
 plotellipses(pca_aphid_traits,level = .95,
@@ -39,7 +38,7 @@ plotellipses(pca_aphid_traits,level = .95,
              label = "none")
 
 # Example: quick focus on one trait ####
-trait = "femur_length"
+trait = "body_length"
 
 # Visualize the distribution per plot + per collector:
 aphid_traits_long %>%

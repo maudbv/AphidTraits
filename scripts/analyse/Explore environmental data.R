@@ -1,15 +1,18 @@
 # Explore environmental data
 
 # Ordination of plot data in a Principal Component Analysis (PCA)
-library(FactoMineR)
+library(FactoMineR) 
 
 pca_environment <- PCA(
-  plot_data[ ,c("urban_rural","Seal_500", "Pop_500",
-                "ShHerb_500","ShDry_500",
+  plot_data[ ,c("urban_rural", # category of plots
+                "Seal_500", # % sealing in 500m radius
+                "Pop_500", # Human population density
+                "ShHerb_500", # % of herbacous biotope areas
+                "ShDry_500", # % of dry grasslands areas
                  # "N", "P", "SVF", "Wc",
                  # "SR", "prop.neo",
-                "TreeCover_patch",
-                "Urb_clim")],
+                "TreeCover_patch", # Tree cover in the patch of grassland
+                "Urb_clim")], # urban microclimate category
   quali.sup = 1,  # this is to have "urban_rural" as a category
   graph = FALSE
 )

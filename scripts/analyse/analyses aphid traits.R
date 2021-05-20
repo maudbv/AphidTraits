@@ -2,7 +2,7 @@
 
 ## 2.1 Linear models to partition variance among colonies/plots:
 
-#Example for one trait : femur length left
+#Example for one trait : femur length
 
 # LINEAR MODEL:
 f <- lm(femur_length ~ 
@@ -23,7 +23,8 @@ print(a)
 
 plot(DHARMa::simulateResiduals(f)) # looks pretty good, significance is likely only due to the large number of data points
 
+hist(f$residuals)
 
+## 2.2 Linear models testing for a relationship between aphid traits and % Sealing
 
-
-## 2.1 Linear models testing for a relationship between aphid traits and % Sealing
+## 2.3 Linear models testing for a relationship between aphid traits and % Sealing

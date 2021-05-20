@@ -26,13 +26,17 @@ source('scripts/import data/import aphid trait measurements.R')
 source('scripts/import data/import plant traits.R')
 
 ## Import plot parameters
+source('scripts/import data/import colony parameters.R')
+
+
 
 ## Save clean and formatted data:
 save(aphid_df, aphid_traits, aphid_traits_long,
-     plot_data,
+     plot_data, colony_parameters,
      plant_traits, plant_traits_raw,
-     file = "clean data/Aphid_trait_data_18-05-2021.Rdata")
+     file = "clean data/Aphid_trait_data_20.05.2021.Rdata")
      
+write.csv(aphid_traits, file = "clean data/aphid_traits.csv")
 
 # Statistical analyses ####
 

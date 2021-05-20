@@ -19,14 +19,14 @@ list_of_files = list.files(path = "data/imageJ results/",
                            full.names = TRUE)
 
 # read and bind all text files
-aphid_df<-   purrr::map_dfr(.f = data.table::fread,
+aphid_df <-   purrr::map_dfr(.f = data.table::fread,
                               .x = list_of_files,
                               data.table = FALSE)
 
 # Change to latin-1 encoding to deal with german special characters
 Encoding(aphid_df$Label) <- "latin1"
 
-## extract informatino from label
+## extract information from label
 aphid_df = aphid_df %>%
   separate(Label,
            into = c("PhotoName", "TraitLabel"),
