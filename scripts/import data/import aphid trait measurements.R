@@ -43,16 +43,16 @@ for (i in unique(plot_names$`name of image`)){
   # Only for judith plot names
   if( plot_names[plot_names$`name of image` == i,
                  "collector"] =="Judith"){
-  # Account for some of the Judith plot with ambiguous names
-  # e.g. U2_ vs. U2_2
-  ind1 <- grep(pattern = paste(i,"1", sep = ""),
-               x = aphid_df$PhotoName)
-  if (length(ind1) >0) ind <- ind[which(!ind %in% ind1)]
-  
-  ind2 <- grep(pattern = paste(i,"2", sep = ""),
-               x = aphid_df$PhotoName)
+    # Account for some of the Judith plot with ambiguous names
+    # e.g. U2_ vs. U2_2
+    ind1 <- grep(pattern = paste(i,"1", sep = ""),
+                 x = aphid_df$PhotoName)
+    if (length(ind1) >0) ind <- ind[which(!ind %in% ind1)]
+    
+    ind2 <- grep(pattern = paste(i,"2", sep = ""),
+                 x = aphid_df$PhotoName)
     if (length(ind2) >0) ind <- ind[which(!ind %in% ind2)]
-
+    
   }
   
   # extract info for the plot:
@@ -380,27 +380,59 @@ aphid_traits$Rhinaria.mean <- apply(
   aphid_traits[, c("Rhinaria_left","Rhinaria_right")],
   1, mean, na.rm = TRUE)
 
+# Calculate mean trait per individual for left and right values:
+aphid_traits$ant3_length <- rowMeans(
+  cbind(aphid_traits$ant3_length_left,
+        aphid_traits$ant3_length_right),
+  na.rm = TRUE)
+
+aphid_traits$tarsus_length <- rowMeans(
+  cbind(aphid_traits$tarsus_length_left,
+        aphid_traits$tarsus_length_right),
+  na.rm = TRUE)
+
+aphid_traits$femur_length <- rowMeans(
+  cbind(aphid_traits$femur_length_left,
+        aphid_traits$femur_length_right),
+  na.rm = TRUE)
+
+aphid_traits$tibia_length <- rowMeans(
+  cbind(aphid_traits$tibia_length_left,
+        aphid_traits$tibia_length_right),
+  na.rm = TRUE)
+
+
 #calculate fluctuating left-right asymetry 
-aphid_traits$Rhinaria.asym <- rowSums(cbind(aphid_traits$Rhinaria_left,
-                                      - aphid_traits$Rhinaria_right),
-                                      na.rm = TRUE)
-aphid_traits$ant3_length_asym <- rowSums(cbind(aphid_traits$ant3_length_left,
-                                            - aphid_traits$ant3_length_right),
-                                      na.rm = TRUE)
+aphid_traits$Rhinaria.asym <- rowSums(
+  cbind(aphid_traits$Rhinaria_left,
+        - aphid_traits$Rhinaria_right),
+  na.rm = TRUE)
 
-aphid_traits$tarsus_length_asym <- rowSums(cbind(aphid_traits$tarsus_length_left,
-                                               - aphid_traits$tarsus_length_right),
-                                         na.rm = TRUE)
+aphid_traits$ant3_length_asym <- rowSums(
+  cbind(aphid_traits$ant3_length_left,
+        - aphid_traits$ant3_length_right),
+  na.rm = TRUE)
 
-aphid_traits$femur_length_asym <- rowSums(cbind(aphid_traits$femur_length_left,
-                                                 - aphid_traits$femur_length_right),
-                                           na.rm = TRUE)
+aphid_traits$tarsus_length_asym <- rowSums(
+  cbind(aphid_traits$tarsus_length_left,
+        - aphid_traits$tarsus_length_right),
+  na.rm = TRUE)
 
-aphid_traits$tibia_length_asym <- rowSums(cbind(aphid_traits$tibia_length_left,
-                                                - aphid_traits$tibia_length_right),
-                                          na.rm = TRUE)
+aphid_traits$femur_length_asym <- rowSums(
+  cbind(aphid_traits$femur_length_left,
+        - aphid_traits$femur_length_right),
+  na.rm = TRUE)
 
-# Still some missing info to check!! ---> elena
+aphid_traits$tibia_length_asym <- rowSums(
+  cbind(aphid_traits$tibia_length_left,
+        - aphid_traits$tibia_length_right),
+  na.rm = TRUE)
+
+# Still some missing info to check!! ---> elena ?
+
+
+
 
 # clean up ####
 
+rm(i,x,ind, ind1, ind2, tmp,x)
