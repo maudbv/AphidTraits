@@ -48,9 +48,18 @@ aphid_traits_long %>%
   geom_boxplot() 
 # we see a clear outlier!
 
+#Example 2: look at femur-length
+trait2 = "femur_length"
+
+aphid_traits_long %>%
+  filter(Trait.type==trait2) %>%
+  ggplot( aes(x = Length.mean, y = ID_plot,
+              fill = as.factor(collector))) +
+  geom_boxplot() 
+
 # Look at all the measured traits together: ####
 
-quartz()
+x11()          #for windows
 aphid_traits_long %>%
   ggplot( aes(x = Length.mean, y = ID_plot,
               fill = as.factor(collector) )) +

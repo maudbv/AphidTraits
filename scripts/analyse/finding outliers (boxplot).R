@@ -127,4 +127,78 @@ aphid_traits_long %>%
               fill = as.factor(collector))) +
   geom_boxplot() 
 
+# Additional graph for Rhinaria counts
+x11()
+aphid_traits %>%
+  ggplot( aes(x = Rhinaria.mean, y = ID_plot,    #KLAPPT NICHT :(
+              fill = as.factor(collector) )) +
+  geom_boxplot()
+
 ### IMPORT ERROR SHEET FROM EXCEL ###
+
+
+### Look at normal distributions ###
+#ABDOMEN LENGTH
+#by using histogram
+aphid_traits$abdomen_length
+hist(aphid_traits$abdomen_length,breaks=40,xlab="Abdomen Length",
+     main="Histogram of abdomen length")
+
+#by using kernel density plot
+d <- density(aphid_traits$abdomen_length)
+plot(d)
+
+ks.test(aphid_traits$abdomen_length,"pnorm",
+        mean=mean(aphid_traits$abdomen_length),
+        sd=sd(aphid_traits$abdomen_length))
+#p-value > alpha (alpha=0.05) means we have a normal distribution
+
+#plotting of quantiles
+qqnorm(aphid_traits$abdomen_length)
+#plotting of line where the quantiles should be
+qqline(aphid_traits$abdomen_length)
+
+#ANT3 LENGTH
+aphid_traits$ant3_length
+hist(aphid_traits$ant3_length,breaks=40,xlab="ant3_length",
+     main="Histogram of ant3_length")
+
+d2 <- density(aphid_traits$ant3_length)
+plot(d2)
+
+ks.test(aphid_traits$ant3_length,"pnorm",      #NA lässt test nicht zu
+        mean=mean(aphid_traits$ant3_length),
+        sd=sd(aphid_traits$ant3_length))
+
+qqnorm(aphid_traits$ant3_length)
+qqline(aphid_traits$ant3_length)
+
+#BODY LENGTH
+aphid_traits$body_length
+hist(aphid_traits$body_length,breaks=40,xlab="bodylength",
+     main="Histogram of body_length")
+
+d3 <- density(aphid_traits$body_length)
+plot(d3)
+
+ks.test(aphid_traits$body_length,"pnorm",     
+        mean=mean(aphid_traits$body_length),
+        sd=sd(aphid_traits$body_length))
+
+qqnorm(aphid_traits$body_length)
+qqline(aphid_traits$body_length)
+
+#HEAD WIDTH
+aphid_traits$head_width
+hist(aphid_traits$head_width,breaks=40,xlab="head_width",
+     main="Histogram of head_width")
+
+d4 <- density(aphid_traits$head_width)
+plot(d4)
+
+ks.test(aphid_traits$head_width,"pnorm",     
+        mean=mean(aphid_traits$head_width),
+        sd=sd(aphid_traits$head_width))
+
+qqnorm(aphid_traits$head_width)
+qqline(aphid_traits$head_width)
