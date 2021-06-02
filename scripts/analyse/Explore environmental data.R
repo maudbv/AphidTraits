@@ -9,6 +9,7 @@ pca_environment <- PCA(
                 "Pop_500", # Human population density
                 "ShHerb_500", # % of herbacous biotope areas
                 "ShDry_500", # % of dry grasslands areas
+                "Hanski_Herb",
                  # "N", "P", "SVF", "Wc",
                  # "SR", "prop.neo",
                 "TreeCover_patch", # Tree cover in the patch of grassland

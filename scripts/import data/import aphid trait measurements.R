@@ -435,4 +435,4 @@ aphid_traits$tibia_length_asym <- rowSums(
 
 # clean up ####
 
-rm(i,x,ind, ind1, ind2, tmp,x)
+rm(i,ind, ind1, ind2, tmp,x)
