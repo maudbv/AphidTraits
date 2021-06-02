@@ -33,3 +33,16 @@ aphid_dftest[3808:3810,19] <- "4"
 
 #changing magn. from 3 to 4 in Oh_01_2_C rostrum_length_left for all three measurments
 aphid_dftest[3847:3849,19] <- "4" 
+
+# import outlier sheet with the columns from Maud
+
+library(readr)
+outliers <- read_csv("data/outliers.csv")   #csv is weird
+
+library(readxl) #inserting excel sheet
+Kopie_von_outliers_maud_1 <- read_excel("data/Kopie von outliers_maud-1.xlsx")
+View(Kopie_von_outliers_maud_1)
+
+###aphid_dftest1=cbind(aphid_dftest,Kopie_von_outliers_maud_1$column_to_change)###
+
+aphid_dftest[]

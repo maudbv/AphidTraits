@@ -144,8 +144,9 @@ aphid_traits$abdomen_length
 hist(aphid_traits$abdomen_length,breaks=40,xlab="Abdomen Length",
      main="Histogram of abdomen length")
 
+
 #by using kernel density plot
-d <- density(aphid_traits$abdomen_length)
+d <- density(aphid_traits$abdomen_length,xlim=NULL)
 plot(d)
 
 ks.test(aphid_traits$abdomen_length,"pnorm",
@@ -202,3 +203,37 @@ ks.test(aphid_traits$head_width,"pnorm",
 
 qqnorm(aphid_traits$head_width)
 qqline(aphid_traits$head_width)
+
+# ROSTRUM LENGTH
+aphid_traits$rostrum_length
+hist(aphid_traits$rostrum_length,breaks=40,xlab="rostrum_length",
+     main="Histogram of rostrum_length")
+
+d5 <- density(aphid_traits$rostrum_length)
+plot(d5)
+
+ks.test(aphid_traits$rostrum_length,"pnorm",     
+        mean=mean(aphid_traits$rostrum_length),
+        sd=sd(aphid_traits$rostrum_length))
+
+qqnorm(aphid_traits$rostrum_length)
+qqline(aphid_traits$rostrum_length)
+
+#SIPHUNCULI LENGTH
+aphid_traits$siph_length
+hist(aphid_traits$siph_length,breaks=40,xlab="siph_length",
+     main="Histogram of siph_length")
+
+d6 <- density(aphid_traits$siph_length)
+plot(d6)
+
+ks.test(aphid_traits$siph_length,"pnorm",     
+        mean=mean(aphid_traits$siph_length),
+        sd=sd(aphid_traits$siph_length))
+
+qqnorm(aphid_traits$siph_length)
+qqline(aphid_traits$siph_length)
+
+#TARSUS LENGTH
+#THORAX WIDTH
+#TIBIA LENGTH

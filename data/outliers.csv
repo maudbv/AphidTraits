@@ -1,0 +1,26 @@
+﻿problem.indiv;trait;comment;solution;column_to_change;corrected_value
+Oh_01_3_E;femur_length_left;magnification is wrong (0.63 instead of 2);set magnification to 2 in aphid_df;Magnification;2
+Oh_01_3_E;femur_length_right;magnification is wrong (0.63 instead of 2);set magnification to 2 in aphid_df;Magnification;2
+Oh_01_1.2_E;abdomen_length;no error found, just small value;set to NA?;Length.mean;NA
+Oh_01_3_E;ant3_length_left;magnification is wrong (0.63 instead of 2);set magnification to 2 in aphid_df;Magnification;2
+Oh_01_3_E;ant3_length_right;magnification is wrong (0.63 instead of 2);set magnification to 2 in aphid_df;Magnification;2
+Om_02_1_B;ant3_length_;NA;;;
+Oh_02_3_B;body_width;only 1 rep., difficult measurement, because aphid is deformed;measure again or NA?;Length.mean;NA
+Oh_01_2_C;head_length;no error found, just small value;set to NA?;Length.mean;NA
+Oh_01_3_D;head_length;magnification is wrong (2 instead of 1);set magnification to 1 in aphid_df;Magnification;1
+Nh_10_1_B;head_length;magnification is wrong (2 instead of 1);set magnification to 1 in aphid_df;Magnification;1
+Oh_01_3_E;rostrum_length;NA;;;
+Oh_01_2_B;rostrum_length;magnification is wrong (3 instead of 4);set magnification to 4 in aphid_df;Magnification;4
+Oh_01_2_C;rostrum_length;magnification is wrong (3 instead of 4);set magnification to 4 in aphid_df;Magnification;4
+Om_06_1_C;rostrum_length;NA;;;
+Om_06_1_D;rostrum_length;maybe Magn. wrong (4 instead of 5?);not sure if next magn. Was 5, but it would make sense from the numbers;Length.mean;NA
+Nl_55_1_A;siph_length_3;result was wrongly named;should actually be named head_width_3;Trait;head_width_3
+WS9_3_A;siph_length_3;result was wrongly named;should actually be named head_width_3;Trait;head_width_3
+SG_U3_1_C;siph_length_2;result was wrongly named;should actually be named head_width_2;Trait;head_width_2
+MS_R3B_E;siph_length_3;result was wrongly named;should actually be named head_width_3;Trait;head_width_3
+Oh_01_3_E;tarsus_length_left;magnification is wrong (0.63 instead of 2);set magnification to 2 in aphid_df;Magnification;2
+Oh_01_3_E;tarsus_length_right;magnification is wrong (0.63 instead of 2);set magnification to 2 in aphid_df;Magnification;2
+Oh_01_3_D;thorax_width;magnification is wrong (2 instead of 1);set magnification to 1 in aphid_df;Magnification;1
+Nh_10_1_B;thorax_width;magnification is wrong (2 instead of 1);set magnification to 1 in aphid_df;Magnification;1
+Oh_01_3_E;tibia_length_left;magnification is wrong (0.63 instead of 2);set magnification to 2 in aphid_df;Magnification;2
+Oh_01_3_E;tibia_length_right;magnification is wrong (0.63 instead of 2);set magnification to 2 in aphid_df;Magnification;2
