@@ -276,6 +276,66 @@ aphid_df = merge( aphid_df,
        by = "PhotoName",
        all.x = TRUE)
 
+# Correcting the magnification (outliers)
+
+#Changing magnification of outliers in femur+tarsus+tibia+ant3 length of Oh_01-3-E
+which(aphid_df$Individual == "Oh_01-3-E" & aphid_df$Trait.type == "femur_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Oh_01-3-E" & 
+          aphid_df$Trait.type == "femur_length"),
+  "Magnification"] <- "2"
+
+which(aphid_df$Individual == "Oh_01-3-E" & aphid_df$Trait.type == "tarsus_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Oh_01-3-E" & 
+          aphid_df$Trait.type == "tarsus_length"),
+  "Magnification"] <- "2"
+
+which(aphid_df$Individual == "Oh_01-3-E" & aphid_df$Trait.type == "tibia_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Oh_01-3-E" & 
+          aphid_df$Trait.type == "tibia_length"),
+  "Magnification"] <- "2"
+
+which(aphid_df$Individual == "Oh_01-3-E" & aphid_df$Trait.type == "ant3_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Oh_01-3-E" & 
+          aphid_df$Trait.type == "ant3_length"),
+  "Magnification"] <- "2"
+
+#Changing magnification of outliers in rostrum length of Oh_01-2-B and Oh_01-2-C
+which(aphid_df$Individual == "Oh_01-2-B" & aphid_df$Trait.type == "rostrum_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Oh_01-2-B" & 
+          aphid_df$Trait.type == "rostrum_length"),
+  "Magnification"] <- "4"
+
+which(aphid_df$Individual == "Oh_01-2-C" & aphid_df$Trait.type == "rostrum_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Oh_01-2-C" & 
+          aphid_df$Trait.type == "rostrum_length"),
+  "Magnification"] <- "4"
+
+#Changing magnification of outliers in ventral.jpg of Oh_01-3-D and Nh_10-1-B
+which(aphid_df$Individual == "Oh_01-3-D" & aphid_df$PhotoType == "ventral.jpg")
+
+aphid_df[
+  which(aphid_df$Individual == "Oh_01-3-D" & 
+          aphid_df$PhotoType == "ventral.jpg"),
+  "Magnification"] <- "1"
+
+which(aphid_df$Individual == "Nh_10-1-B" & aphid_df$PhotoType == "ventral.jpg")
+
+aphid_df[
+  which(aphid_df$Individual == "Nh_10-1-B" & 
+          aphid_df$PhotoType == "ventral.jpg"),
+  "Magnification"] <- "1"
 # Import pixel scale conversion table ####
 magnif_conversion <- fread("data/calibration 2020_maud edits.csv")
 
@@ -286,6 +346,122 @@ aphid_df$Length.mm <- aphid_df$Length/
     as.numeric(aphid_df$Magnification),
     magnif_conversion$magnification)]
 
+# Correcting wrong names (outliers)
+# Changing outliers by giving correct name to measurement
+#(in "Trait" and "Trait.type" but not in "TraitLabel", because that's the original label)
+
+which(aphid_df$Individual == "Nl_55-1-A" & aphid_df$Trait.type == "siph_length" &
+        aphid_df$Trait == "siph_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Nl_55-1-A" & 
+          aphid_df$Trait.type == "siph_length" &
+          aphid_df$Trait == "siph_length"),
+  "Trait.type" ] <- "head_width"
+
+aphid_df[
+  which(aphid_df$Individual == "Nl_55-1-A" & 
+          aphid_df$Trait == "siph_length"),
+  "Trait" ] <- "head_width"
+
+# WS9_3_A is individual Ol_55-A-A
+which(aphid_df$Individual == "Ol_55-A-A" & aphid_df$Trait.type == "siph_length" &
+        aphid_df$Trait == "siph_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Ol_55-A-A" & 
+          aphid_df$Trait.type == "siph_length" &
+          aphid_df$Trait == "siph_length"),
+  "Trait.type" ] <- "head_width"
+
+aphid_df[
+  which(aphid_df$Individual == "Ol_55-A-A" & 
+          aphid_df$Trait == "siph_length"),
+  "Trait" ] <- "head_width"
+
+
+# SS_U3_1_C is individual Nl_55-1-C
+
+which(aphid_df$Individual == "Nl_55-1-C" & aphid_df$Trait.type == "siph_length" &
+        aphid_df$Trait == "siph_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Nl_55-1-C" & 
+          aphid_df$Trait.type == "siph_length" &
+          aphid_df$Trait == "siph_length"),
+  "Trait.type" ] <- "head_width"
+
+aphid_df[
+  which(aphid_df$Individual == "Nl_55-1-C" & 
+          aphid_df$Trait == "siph_length"),
+  "Trait" ] <- "head_width"
+
+# MS_R3B_E is individual Ol_11-E-E
+
+which(aphid_df$Individual == "Ol_11-E-E" & aphid_df$Trait.type == "siph_length" &
+        aphid_df$Trait == "siph_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Ol_11-E-E" & 
+          aphid_df$Trait.type == "siph_length" &
+          aphid_df$Trait == "siph_length"),
+  "Trait.type" ] <- "head_width"
+
+aphid_df[
+  which(aphid_df$Individual == "Ol_11-E-E" & 
+          aphid_df$Trait == "siph_length"),
+  "Trait" ] <- "head_width"
+
+# NA values (outliers)
+
+which(aphid_df$Individual == "Oh_01-1.2-E" & aphid_df$Trait.type == "abdomen_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Oh_01-1.2-E" & 
+          aphid_df$Trait.type == "abdomen_length"),
+  "Length.mm"] <- "NA"
+
+which(aphid_df$Individual == "Oh_02-3-B" & aphid_df$Trait.type == "body_width")
+
+aphid_df[
+  which(aphid_df$Individual == "Oh_02-3-B" & 
+          aphid_df$Trait.type == "body_width"),
+  "Length.mm"] <- "NA"
+
+which(aphid_df$Individual == "Oh_01-2-C" & aphid_df$Trait.type == "head_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Oh_01-2-C" & 
+          aphid_df$Trait.type == "head_length"),
+  "Length.mm"] <- "NA"
+
+which(aphid_df$Individual == "Om_06-1-D" & aphid_df$Trait.type == "rostrum_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Om_06-1-D" & 
+          aphid_df$Trait.type == "rostrum_length"),
+  "Length.mm"] <- "NA"
+
+which(aphid_df$Individual == "Om_06-1-C" & aphid_df$Trait.type == "rostrum_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Om_06-1-C" & 
+          aphid_df$Trait.type == "rostrum_length"),
+  "Length.mm"] <- "NA"
+
+which(aphid_df$Individual == "Om_02-1-B" & aphid_df$Trait == "ant3_length_right")
+
+aphid_df[
+  which(aphid_df$Individual == "Om_02-1-B" & 
+          aphid_df$Trait == "ant3_length_right"),
+  "Length.mm"] <- "NA"
+
+which(aphid_df$Individual == "Oh_01-3-E" & aphid_df$Trait.type == "rostrum_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Oh_01-3-E" & 
+          aphid_df$Trait.type == "rostrum_length"),
+  "Length.mm"] <- "NA"
 # Calculate mean trait values across 3 replicate measures ####
 aphid_traits_long <- aphid_df %>% 
   group_by(collector, date_collected, PhotoName, ID_plot,
@@ -436,3 +612,4 @@ aphid_traits$tibia_length_asym <- rowSums(
 # clean up ####
 
 rm(i,ind, ind1, ind2, tmp,x)
+
