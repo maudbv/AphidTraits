@@ -232,7 +232,7 @@ aphid_dftest[
 
 
 
-##### changing aphid_dftest to aphfid_df
+##### 
 
 #Changing magnification of outliers in femur+tarsus+tibia+ant3 length of Oh_01-3-E
 which(aphid_df$Individual == "Oh_01-3-E" & aphid_df$Trait.type == "femur_length")
@@ -292,3 +292,119 @@ aphid_df[
   which(aphid_df$Individual == "Nh_10-1-B" & 
           aphid_df$PhotoType == "ventral.jpg"),
   "Magnification"] <- "1"
+
+#Changing outliers to NA
+
+which(aphid_df$Individual == "Oh_01-1.2-E" & aphid_df$Trait.type == "abdomen_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Oh_01-1.2-E" & 
+          aphid_df$Trait.type == "abdomen_length"),
+  "Length.mm"] <- "NA"
+
+which(aphid_df$Individual == "Oh_02-3-B" & aphid_df$Trait.type == "body_width")
+
+aphid_df[
+  which(aphid_df$Individual == "Oh_02-3-B" & 
+          aphid_df$Trait.type == "body_width"),
+  "Length.mm"] <- "NA"
+
+which(aphid_df$Individual == "Oh_01-2-C" & aphid_df$Trait.type == "head_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Oh_01-2-C" & 
+          aphid_df$Trait.type == "head_length"),
+  "Length.mm"] <- "NA"
+
+which(aphid_df$Individual == "Om_06-1-D" & aphid_df$Trait.type == "rostrum_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Om_06-1-D" & 
+          aphid_df$Trait.type == "rostrum_length"),
+  "Length.mm"] <- "NA"
+
+which(aphid_df$Individual == "Om_06-1-C" & aphid_df$Trait.type == "rostrum_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Om_06-1-C" & 
+          aphid_df$Trait.type == "rostrum_length"),
+  "Length.mm"] <- "NA"
+
+which(aphid_df$Individual == "Om_02-1-B" & aphid_df$Trait == "ant3_length_right")
+
+aphid_df[
+  which(aphid_df$Individual == "Om_02-1-B" & 
+          aphid_df$Trait == "ant3_length_right"),
+  "Length.mm"] <- "NA"
+
+which(aphid_df$Individual == "Oh_01-3-E" & aphid_df$Trait.type == "rostrum_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Oh_01-3-E" & 
+          aphid_df$Trait.type == "rostrum_length"),
+  "Length.mm"] <- "NA"
+
+# Changing outliers by giving correct name to measurement
+#(in "Trait" and "Trait.type" but not in "TraitLabel", because that's the original label)
+
+which(aphid_df$Individual == "Nl_55-1-A" & aphid_df$Trait.type == "siph_length" &
+        aphid_df$Trait == "siph_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Nl_55-1-A" & 
+          aphid_df$Trait.type == "siph_length" &
+          aphid_df$Trait == "siph_length"),
+  "Trait.type" ] <- "head_width"
+
+aphid_df[
+  which(aphid_df$Individual == "Nl_55-1-A" & 
+          aphid_df$Trait == "siph_length"),
+  "Trait" ] <- "head_width"
+
+# WS9_3_A is individual Ol_55-A-A
+which(aphid_df$Individual == "Ol_55-A-A" & aphid_df$Trait.type == "siph_length" &
+        aphid_df$Trait == "siph_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Ol_55-A-A" & 
+          aphid_df$Trait.type == "siph_length" &
+          aphid_df$Trait == "siph_length"),
+  "Trait.type" ] <- "head_width"
+
+aphid_df[
+  which(aphid_df$Individual == "Ol_55-A-A" & 
+          aphid_df$Trait == "siph_length"),
+  "Trait" ] <- "head_width"
+
+
+# SS_U3_1_C is individual Nl_55-1-C
+
+which(aphid_df$Individual == "Nl_55-1-C" & aphid_df$Trait.type == "siph_length" &
+        aphid_df$Trait == "siph_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Nl_55-1-C" & 
+          aphid_df$Trait.type == "siph_length" &
+          aphid_df$Trait == "siph_length"),
+  "Trait.type" ] <- "head_width"
+
+aphid_df[
+  which(aphid_df$Individual == "Nl_55-1-C" & 
+          aphid_df$Trait == "siph_length"),
+  "Trait" ] <- "head_width"
+
+# MS_R3B_E is individual Ol_11-E-E
+
+which(aphid_df$Individual == "Ol_11-E-E" & aphid_df$Trait.type == "siph_length" &
+        aphid_df$Trait == "siph_length")
+
+aphid_df[
+  which(aphid_df$Individual == "Ol_11-E-E" & 
+          aphid_df$Trait.type == "siph_length" &
+          aphid_df$Trait == "siph_length"),
+  "Trait.type" ] <- "head_width"
+
+aphid_df[
+  which(aphid_df$Individual == "Ol_11-E-E" & 
+          aphid_df$Trait == "siph_length"),
+  "Trait" ] <- "head_width"
