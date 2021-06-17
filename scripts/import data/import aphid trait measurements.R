@@ -34,7 +34,8 @@ aphid_df = aphid_df %>%
            remove = FALSE)
 
 # import plot name conversion table:
-plot_names <- fread("data/table of spotnames_maud.csv", data.table = FALSE)
+plot_names <- fread("data/table of spotnames_maud_by elena.csv", data.table = FALSE)
+
 
 # Add new columns for ID_plot, collector and date of collection
 for (i in unique(plot_names$`name of image`)){
@@ -389,7 +390,7 @@ aphid_df[
   which(aphid_df$Individual == "Nl_55-1-C" & 
           aphid_df$Trait.type == "siph_length" &
           aphid_df$Trait == "siph_length"),
-  "Trait.type" ] <- "head_width"
+  c("Trait.type","Trait") ] <- "head_width"   #change this later
 
 aphid_df[
   which(aphid_df$Individual == "Nl_55-1-C" & 
@@ -419,49 +420,51 @@ which(aphid_df$Individual == "Oh_01-1.2-E" & aphid_df$Trait.type == "abdomen_len
 aphid_df[
   which(aphid_df$Individual == "Oh_01-1.2-E" & 
           aphid_df$Trait.type == "abdomen_length"),
-  "Length.mm"] <- "NA"
+  "Length.mm"] <- NA
 
 which(aphid_df$Individual == "Oh_02-3-B" & aphid_df$Trait.type == "body_width")
 
 aphid_df[
   which(aphid_df$Individual == "Oh_02-3-B" & 
           aphid_df$Trait.type == "body_width"),
-  "Length.mm"] <- "NA"
+  "Length.mm"] <- NA
 
 which(aphid_df$Individual == "Oh_01-2-C" & aphid_df$Trait.type == "head_length")
 
 aphid_df[
   which(aphid_df$Individual == "Oh_01-2-C" & 
           aphid_df$Trait.type == "head_length"),
-  "Length.mm"] <- "NA"
+  "Length.mm"] <- NA
+
 
 which(aphid_df$Individual == "Om_06-1-D" & aphid_df$Trait.type == "rostrum_length")
 
 aphid_df[
   which(aphid_df$Individual == "Om_06-1-D" & 
           aphid_df$Trait.type == "rostrum_length"),
-  "Length.mm"] <- "NA"
+  "Length.mm"] <- NA
 
 which(aphid_df$Individual == "Om_06-1-C" & aphid_df$Trait.type == "rostrum_length")
 
 aphid_df[
   which(aphid_df$Individual == "Om_06-1-C" & 
           aphid_df$Trait.type == "rostrum_length"),
-  "Length.mm"] <- "NA"
+  "Length.mm"] <- NA
 
 which(aphid_df$Individual == "Om_02-1-B" & aphid_df$Trait == "ant3_length_right")
 
 aphid_df[
   which(aphid_df$Individual == "Om_02-1-B" & 
           aphid_df$Trait == "ant3_length_right"),
-  "Length.mm"] <- "NA"
+  "Length.mm"] <- NA
 
 which(aphid_df$Individual == "Oh_01-3-E" & aphid_df$Trait.type == "rostrum_length")
 
 aphid_df[
   which(aphid_df$Individual == "Oh_01-3-E" & 
           aphid_df$Trait.type == "rostrum_length"),
-  "Length.mm"] <- "NA"
+  "Length.mm"] <- NA
+
 # Calculate mean trait values across 3 replicate measures ####
 aphid_traits_long <- aphid_df %>% 
   group_by(collector, date_collected, PhotoName, ID_plot,
@@ -582,29 +585,29 @@ aphid_traits$tibia_length <- rowMeans(
 aphid_traits$Rhinaria.asym <- rowSums(
   cbind(aphid_traits$Rhinaria_left,
         - aphid_traits$Rhinaria_right),
-  na.rm = TRUE)
+  na.rm = F)
 
 aphid_traits$ant3_length_asym <- rowSums(
   cbind(aphid_traits$ant3_length_left,
         - aphid_traits$ant3_length_right),
-  na.rm = TRUE)
+  na.rm = F)
 
 aphid_traits$tarsus_length_asym <- rowSums(
   cbind(aphid_traits$tarsus_length_left,
         - aphid_traits$tarsus_length_right),
-  na.rm = TRUE)
+  na.rm = F)
 
 aphid_traits$femur_length_asym <- rowSums(
   cbind(aphid_traits$femur_length_left,
         - aphid_traits$femur_length_right),
-  na.rm = TRUE)
+  na.rm = F)
 
 aphid_traits$tibia_length_asym <- rowSums(
   cbind(aphid_traits$tibia_length_left,
         - aphid_traits$tibia_length_right),
-  na.rm = TRUE)
+  na.rm = F)
 
-# Still some missing info to check!! ---> elena ?
+
 
 
 

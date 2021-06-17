@@ -16,7 +16,7 @@ shapiro.test(tmp) # normal yay!!
 f <- lm(femur_length ~ 
           collector +    # us or Judith
           ID_plot +      # plot effect
-          Colony%in%ID_plot # colony within plot,
+          Colony%in%ID_plot, # colony within plot,
         data = aphid_traits) 
 
 
