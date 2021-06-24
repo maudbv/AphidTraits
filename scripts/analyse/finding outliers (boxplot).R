@@ -20,6 +20,8 @@ tmp <- tmp[ ,c("ID_plot", "urban_rural",
                "tarsus_length","femur_length","tibia_length",
                "Rhinaria.mean")]
 
+tmp <- na.omit(tmp)
+
 pca_aphid_traits <- PCA(
   tmp,
   quali.sup = 1:2,  # this is to have "plot" and "urban_rural" as a category
@@ -27,6 +29,9 @@ pca_aphid_traits <- PCA(
 )
 
 
+plot(pca_aphid_traits, choix = "var")
+
+#for boxplots
 trait = "body_length"
 
 # Visualize the distribution per plot + per collector:

@@ -436,14 +436,14 @@ aphid_traits_long <- aphid_df %>%
   group_by(collector, date_collected, PhotoName, ID_plot,
            Colony,Individual, Trait.type,Trait, side, Part) %>%
   summarise(count.reps = n(),
-            Length.mean = mean(Length.mm, na.rm = TRUE))
+            Length.mean = mean(Length.mm, na.rm = FALSE))
 
 # sum parts 1 and 2 of traits when relevant
 aphid_traits_long <- aphid_traits_long %>%
   group_by(collector, date_collected, PhotoName, ID_plot,
            Colony,Individual, Trait.type,Trait, side, count.reps) %>%
   summarise(count.parts = n(),
-            Length.mean = sum(Length.mean, na.rm = TRUE))
+            Length.mean = sum(Length.mean, na.rm = FALSE))
 
 # make sure aphid_trait is a data.frame
 aphid_traits_long <- as.data.frame(aphid_traits_long)
