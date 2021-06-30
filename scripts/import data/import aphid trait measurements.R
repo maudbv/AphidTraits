@@ -34,7 +34,8 @@ aphid_df = aphid_df %>%
            remove = FALSE)
 
 # import plot name conversion table:
-plot_names <- fread("data/table of spotnames_maud_by elena.csv", data.table = FALSE, encoding = "Latin-1")
+plot_names <- fread("data/table of spotnames_maud_by elena.csv",
+                    data.table = FALSE, encoding = "Latin-1")
 
 
 # Add new columns for ID_plot, collector and date of collection
@@ -477,22 +478,31 @@ missing_measurements <- magnif_df[which(
     (magnif_df$Magnification!= "NA")),]
 
 nrow(missing_measurements) #34 
+
 # BUT: 2 individuals (D and E) are actually really missing from Judith's SG_U3_2, plus a few body parts of other individuals, so not real mistakes we can fix.
 missing_measurements <- 
   missing_measurements[
     -which(missing_measurements$name_match == "Südgelände U3 29.8.19"),]
 
 nrow(missing_measurements)
-# 16 missing measurements for some photos with non-standard names
-# -------> to check and update only if we have time.
-
+# 16 really missing measurements for some photos with non-standard names
+# -------> to check and update by measuring pictures again only if we have time.
 # SOME mistakes due to 2 parts (left and right) on same picture:
 # e.g. "Ol_55_1_B_left leg" and "Ol_55_1_B_right leg" 
 # do not appear because the pictures had a different name:
 # "Ol_55_1_B_legs L&R" which was not ignored by the aphid trait plugin...
-
 # Two due to typos on "ocular tubercles"
 
+# Remove Judith's common garden colonies from the dataset: ####
+
+## identify the name of tranpslanted colonies:
+transplants <- plot_names$Colony[grep("transplanted", plot_names$note)]
+
+## identify the rows of data corresponding to these colonies:
+transplants.index  <-unlist(sapply(transplants, FUN = function(n) grep(n, aphid_traits_long$Colony)))
+
+## removong those rows from the dataset:
+aphid_traits_long <- aphid_traits_long[ - transplants.index,]
 
 # Create a "wide" version of aphid_traits_long  ####
 # wide = organised with traits as columns

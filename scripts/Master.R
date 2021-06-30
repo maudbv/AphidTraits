@@ -33,7 +33,7 @@ source('scripts/import data/Import environmental data.R')
 # save(aphid_df, aphid_traits, aphid_traits_long,
 #      plot_data, colony_parameters,
 #      plant_traits, plant_traits_raw,
-#      file = "clean data/Aphid_trait_data_31.05.2021.Rdata")
+#      file = "clean data/Aphid_trait_data_10.06.2021.Rdata")
      
 write.csv(aphid_traits, file = "clean data/aphid_traits.csv")
 
