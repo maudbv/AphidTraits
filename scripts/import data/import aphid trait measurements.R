@@ -584,11 +584,12 @@ aphid_traits$tibia_length_asym <- rowSums(
   na.rm = F)
 
 
-
-
-
+# Create new data table with trait variance and fluctuating asymetry per colony: ###
+# fluctuating asymetry: defined as the standard deviation of asymetry across individuals from the same colony
+aphid_SD <- aphid_traits %>% 
+  group_by(collector, ID_plot,Colony) %>%
+  summarise(across(where(is.numeric), ~ sd(.x, na.rm = TRUE)))
 
 # clean up ####
-
 rm(i,ind, ind1, ind2, tmp,x)
 

@@ -34,7 +34,7 @@ plot(pca_aphid_traits, choix = "ind",
     ylim = c(-5,5), graph.type = "classic" )
 
 plotellipses(pca_aphid_traits,level = .95,
-             keepvar = 2,ylim = c(-5,5), 
+             keepvar = 2, ylim = c(-5,5), 
              label = "none")
 
 # Example: quick focus on one trait ####
@@ -46,7 +46,7 @@ aphid_traits_long %>%
   ggplot( aes(x = Length.mean, y = ID_plot,
               fill = as.factor(collector))) +
   geom_boxplot() 
-# we see a clear outlier!
+
 
 #Example 2: look at femur-length
 trait2 = "femur_length"
@@ -66,13 +66,21 @@ aphid_traits_long %>%
   geom_boxplot() + 
   facet_wrap(~ Trait.type, scale="free")
 
-# => will need to remove outliers for each trait
 
 # Additional graph for Rhinaria counts
-quartz()
 aphid_traits %>%
   ggplot( aes(x = Rhinaria.mean, y = ID_plot,
               fill = as.factor(collector) )) +
   geom_boxplot()
 
 #=> will need to remove the "zeros"
+
+
+
+# Look at fluctuating assymetry: ####
+# We look at the standard deviation of individual assymetry within each colony,
+# so we are using the aphid_SD data frame:
+ggplot(aphid_SD,
+       aes(x = tarsus_length_asym, y = ID_plot,
+           fill = as.factor(collector) )) +
+  geom_boxplot()
