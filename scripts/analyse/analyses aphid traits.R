@@ -1,7 +1,7 @@
 # Run statistical analyses for Aphid traits
 
 ## 2.1 Linear models to partition variance among colonies/plots: ####
-
+options(contrasts = rep("contr.sum",2))
 #Example for one trait : femur length
 
 tmp <- aphid_traits$femur_length
@@ -18,6 +18,7 @@ f <- lm(femur_length ~
           ID_plot +      # plot effect
           Colony%in%ID_plot, # colony within plot,
         data = aphid_traits) 
+
 
 
 summary(f)

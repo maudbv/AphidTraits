@@ -34,7 +34,7 @@ aphid_df = aphid_df %>%
            remove = FALSE)
 
 # import plot name conversion table:
-plot_names <- fread("data/table of spotnames_maud_by elena.csv", data.table = FALSE)
+plot_names <- fread("data/table of spotnames_maud_by elena.csv", data.table = FALSE, encoding = "Latin-1")
 
 
 # Add new columns for ID_plot, collector and date of collection
