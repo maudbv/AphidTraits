@@ -72,9 +72,7 @@ aphid_traits %>%
   ggplot( aes(x = Rhinaria.mean, y = ID_plot,
               fill = as.factor(collector) )) +
   geom_boxplot()
-
-#=> will need to remove the "zeros"
-
+#=> will need to remove the "zeros" ?
 
 
 # Look at fluctuating assymetry: ####
