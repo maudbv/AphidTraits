@@ -22,11 +22,12 @@ options(contrasts = c( "contr.treatment","contr.sum"))
 df <- data.frame(
   aphid_traits,
   Seal_500 = plot_data[aphid_traits$ID_plot, "Seal_500"],
+  prop_neo = plot_data[aphid_traits$ID_plot, "prop.neo"],
+  Night_temp = plot_data[aphid_traits$ID_plot, "mean_tempNight_summer"],
   urban_rural = plot_data[aphid_traits$ID_plot, "urban_rural"]
 )
 
 # remove Judith's samples for now
-
 df <- filter(df, collector == 'Maud + Elena')
 
 
@@ -40,7 +41,7 @@ qqnorm(tmp)
 shapiro.test(tmp) # normal yay!!
 
 # LINEAR MODEL: = it is a nested ANOVA, as one factor (colony) is nested within another (ID_plot)
-f <- lm(femur_length ~ 
+f <- lm(tibia_length ~ 
           ID_plot/Colony , # colony within plot,
         data = df) 
 
