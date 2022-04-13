@@ -8,6 +8,7 @@ library(tidyverse)
 library(stringi)
 library(data.table)
 library(rio)
+library(stringr)
 
 library(lme4)
 library(lmerTest)

@@ -18,12 +18,16 @@ options(contrasts = c( "contr.treatment","contr.sum"))
 # collector effect (or year effect!), which shows that our collected individuals tended on average to be smaller than Judith's.
 
 
-# Create a data frame with aphid traits and plot data 
+# Create a data frame with aphid traits and plot data
 df <- data.frame(
   aphid_traits,
   Seal_500 = plot_data[aphid_traits$ID_plot, "Seal_500"],
   urban_rural = plot_data[aphid_traits$ID_plot, "urban_rural"]
 )
+
+# remove Judith's samples for now
+
+df <- filter(df, collector == 'Maud + Elena')
 
 
 ## 2.1 Linear models to partition variance among colonies/plots: ####
@@ -37,7 +41,6 @@ shapiro.test(tmp) # normal yay!!
 
 # LINEAR MODEL: = it is a nested ANOVA, as one factor (colony) is nested within another (ID_plot)
 f <- lm(femur_length ~ 
-          collector +    # us or Judith
           ID_plot/Colony , # colony within plot,
         data = df) 
 
@@ -58,7 +61,7 @@ hist(f$residuals, breaks = 40)
 # Mixed models using lmer package lme4
 library(lme4)
 library(lmerTest)
-f <- lmer(femur_length ~ collector + urban_rural +
+f <- lmer(femur_length ~ urban_rural + 
           (1|ID_plot/Colony),
         data = df) 
 
@@ -73,7 +76,7 @@ r2beta(f, method = 'nsj' ) # Nakagawa and Schielzeth approach.
 # Mixed models using lmer package lme4
 library(lme4)
 library(lmerTest)
-f <- lmer(femur_length ~ collector + Seal_500 +
+f <- lmer(femur_length ~  Seal_500 +
             (1|ID_plot/Colony),
           data = df) 
 
