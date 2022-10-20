@@ -1,5 +1,20 @@
 # Explore environmental data
 
+# Create table for Methods section:
+site_description_table <- plot_data[ ,c("ID_plot",
+                "Long",
+                "Lat",
+                "urban_rural", # category of plots
+                "Seal_500" )] # % sealing in 500m radius
+
+colony_sampled <- table(colony_parameters$Plot)
+names(colony_sampled)[names(colony_sampled)=="Südkreuz"] <- "Sk_01"
+site_description_table$colony_sampled <- colony_sampled[rownames(site_description_table)]
+
+site_description_table <- site_description_table[order(site_description_table$Seal_500),]
+
+write.csv(site_description_table, "results/site_description_table.csv")
+
 # Ordination of plot data in a Principal Component Analysis (PCA)
 library(FactoMineR) 
 
@@ -19,8 +34,11 @@ pca_environment <- PCA(
 )
 
 # represent the ordination of variables in 2 first dimensions:
-plot(pca_environment, choix = "var")
-plot(pca_environment, choix = "ind", habillage = 1)
+par(mfrow = c(1,2))
+plot(pca_environment, choix = "var",
+     graph.type = "classic")
+plot(pca_environment, choix = "ind", habillage = 1,
+     ,graph.type = "classic")
 
 ## Differences in specific factors:
 # The difference is in urbanisation factors:
