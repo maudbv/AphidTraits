@@ -34,11 +34,11 @@ pca_environment <- PCA(
 )
 
 # represent the ordination of variables in 2 first dimensions:
-par(mfrow = c(1,2))
+par(mfrow = c(1,2), cex = 0.8)
 plot(pca_environment, choix = "var",
      graph.type = "classic")
 plot(pca_environment, choix = "ind", habillage = 1,
-     ,graph.type = "classic")
+     graph.type = "classic")
 
 ## Differences in specific factors:
 # The difference is in urbanisation factors:

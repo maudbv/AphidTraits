@@ -29,3 +29,4 @@ colony_parameters$`%parasited` <- as.numeric(colony_parameters$`%parasited`)
 # transform into a numeric column
 colnames(colony_parameters)[colnames(colony_parameters) == "%parasited"] <- 
   "perc.parasitized"
+

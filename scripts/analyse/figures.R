@@ -93,5 +93,5 @@ par(mar = c(4,4,1,1),las = 1, cex.axis = 0.8) #parameters of plotting area
   
 # urbqn rural grouping ####
   boxplot (body_width ~ urban_rural, data = df)
-  boxplot (tarsus_length_asym ~ urban_rural, data = df)
+  boxplot (tarsus_length ~ urban_rural, data = df)
   

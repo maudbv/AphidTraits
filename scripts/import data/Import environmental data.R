@@ -44,3 +44,4 @@ plot_data$urban_rural <- c("urban", "rural")[(plot_data$Seal_500<20) +1]
 
 # Create row names with ID_plot
 rownames(plot_data) <- plot_data$ID_plot
+

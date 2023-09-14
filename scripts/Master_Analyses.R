@@ -14,7 +14,7 @@
 ## 3.3 Linear models testing for a linear relationship between traits and % Sealing
 
 # 4. for Aphid colony parameters (aphid nb, ants)
-## 4.1 Linear models to partition variance among colonies/plots:
+
 ## 4.2 Linear models testing for difference in colony parameters between urban vs rural plots
 ## 4.3 Linear models testing for a linear relationship between  colony parameters and % Sealing
 
